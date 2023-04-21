@@ -17,6 +17,13 @@ val transform = taskKey[Unit]("Transform sources")
 transform := {
   val inputDir  = (root / Compile / scalaSource).value
   val outputDir = (transformed / Compile / sourceManaged).value
-  Generator.gen(inputDir, outputDir, Seq("cool-semant.scala"), Map("cool-semant.scala" -> Seq(960)))
+  Generator.gen(
+    inputDir,
+    outputDir,
+    Seq("cool-semant.scala"),
+    Map("cool-semant.scala" -> Seq(960)),
+    "M_SEMANT",
+    "visit_1_1_0"
+  )
 }
 
