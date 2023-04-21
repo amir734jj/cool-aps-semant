@@ -1,4 +1,5 @@
 import scala.meta.*
+import scala.util.Properties
 
 object ScalametaTransformer {
   private val ifElseTransformer = new Transformer {
@@ -50,10 +51,16 @@ object ScalametaTransformer {
     }
   }
 
-  def transform(str: String): String = {
+  def transform(str: String, emptyLineIndices: Seq[Int] = Seq()): String = {
     val origTree = str.parse[Source].get
     val newTree = classMethodTransformer(origTree)
-    newTree.toString
+    insertEmptyLines(newTree.toString, emptyLineIndices)
   }
+
+  private def insertEmptyLines(str: String, indices: Seq[Int]): String =
+    indices.foldLeft(str)(insertEmptyLine)
+
+  private def insertEmptyLine(str: String, index: Int): String =
+    str.linesIterator.patch(index, Iterator.fill(1)(""), 0).mkString(Properties.lineSeparator)
 
 }
