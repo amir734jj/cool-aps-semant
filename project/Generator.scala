@@ -23,7 +23,7 @@ object Generator {
       val inputStr = IO.read(inputFile)
       val transform: String => String =
         if (isAll(filesToTransform) || filesToTransform.contains(inputFileName))
-          (scalametaTransformer.apply(_: String)) andThen emptyLineTransformer.apply
+          (scalametaTransformer(_: String)) andThen emptyLineTransformer.apply
         else identity
       val outputStr = transform(inputStr)
       val outputFile = outputDir / inputFile.relativeTo(inputDir).get.toString

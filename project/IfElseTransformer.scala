@@ -3,7 +3,7 @@ import scala.meta.*
 object IfElseTransformer extends TreeTransformer {
   override def apply(tree: Tree): Tree = tree match {
     case q"if ($condExpr) $thenExpr else $elseExpr" =>
-      println(s"matches if-else")
+      println("matches if-else")
       val condName = Term.fresh("cond")
       val thenName = Term.fresh("then")
       val elseName = Term.fresh("else")
