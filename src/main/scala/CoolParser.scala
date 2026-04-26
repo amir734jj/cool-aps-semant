@@ -278,146 +278,10 @@ class CoolParser extends CoolParserBase {
     }
   }
 
-  def parse_simple_cases() : Cases = {
-    yystate212();
-    yynt match {
-      case YYNTsimple_cases(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_class_list() : Classes = {
-    yystate2();
-    yynt match {
-      case YYNTclass_list(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_var_formals() : Formals = {
-    yystate8();
-    yynt match {
-      case YYNTvar_formals(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_class_decl() : Class = {
-    yystate6();
-    yynt match {
-      case YYNTclass_decl(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
   def parse_formal() : Formal = {
     yystate112();
     yynt match {
       case YYNTformal(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_var_init() : Expression = {
-    yystate156();
-    yynt match {
-      case YYNTvar_init(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_program() : Unit = {
-    yystate0();
-    yynt match {
-      case YYNTprogram() => ()
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_no_comma1a() : Unit = {
-    yystate106();
-    yynt match {
-      case YYNTno_comma1a() => ()
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_feature_list() : Features = {
-    yystate20();
-    yynt match {
-      case YYNTfeature_list(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_stmt_list() : Expressions = {
-    yystate120();
-    yynt match {
-      case YYNTstmt_list(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_istmt_list() : Expressions = {
-    yystate158();
-    yynt match {
-      case YYNTistmt_list(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_var_formal() : Formal = {
-    yystate104();
-    yynt match {
-      case YYNTvar_formal(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_actuals() : Expressions = {
-    yystate110();
-    yynt match {
-      case YYNTactuals(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_block() : Expression = {
-    yystate116();
-    yynt match {
-      case YYNTblock(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_var1() : Unit = {
-    yystate108();
-    yynt match {
-      case YYNTvar1() => ()
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_no_comma2a() : Unit = {
-    yystate114();
-    yynt match {
-      case YYNTno_comma2a() => ()
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_expr() : Expression = {
-    yystate118();
-    yynt match {
-      case YYNTexpr(yy) => yy
-      case YYNTerror(s) => throw new YYError(s)
-    }
-  }
-
-  def parse_simple_case() : Case = {
-    yystate214();
-    yynt match {
-      case YYNTsimple_case(yy) => yy
       case YYNTerror(s) => throw new YYError(s)
     }
   }
@@ -430,10 +294,146 @@ class CoolParser extends CoolParserBase {
     }
   }
 
+  def parse_class_decl() : Class = {
+    yystate6();
+    yynt match {
+      case YYNTclass_decl(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_expr() : Expression = {
+    yystate118();
+    yynt match {
+      case YYNTexpr(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
   def parse_superclass() : Symbol = {
     yystate16();
     yynt match {
       case YYNTsuperclass(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_block() : Expression = {
+    yystate116();
+    yynt match {
+      case YYNTblock(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_istmt_list() : Expressions = {
+    yystate158();
+    yynt match {
+      case YYNTistmt_list(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_simple_case() : Case = {
+    yystate214();
+    yynt match {
+      case YYNTsimple_case(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_var_formal() : Formal = {
+    yystate104();
+    yynt match {
+      case YYNTvar_formal(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_program() : Unit = {
+    yystate0();
+    yynt match {
+      case YYNTprogram() => ()
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_class_list() : Classes = {
+    yystate2();
+    yynt match {
+      case YYNTclass_list(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_stmt_list() : Expressions = {
+    yystate120();
+    yynt match {
+      case YYNTstmt_list(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_var_init() : Expression = {
+    yystate156();
+    yynt match {
+      case YYNTvar_init(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_simple_cases() : Cases = {
+    yystate212();
+    yynt match {
+      case YYNTsimple_cases(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_actuals() : Expressions = {
+    yystate110();
+    yynt match {
+      case YYNTactuals(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_no_comma1a() : Unit = {
+    yystate106();
+    yynt match {
+      case YYNTno_comma1a() => ()
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_var_formals() : Formals = {
+    yystate8();
+    yynt match {
+      case YYNTvar_formals(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_var1() : Unit = {
+    yystate108();
+    yynt match {
+      case YYNTvar1() => ()
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_feature_list() : Features = {
+    yystate20();
+    yynt match {
+      case YYNTfeature_list(yy) => yy
+      case YYNTerror(s) => throw new YYError(s)
+    }
+  }
+
+  def parse_no_comma2a() : Unit = {
+    yystate114();
+    yynt match {
+      case YYNTno_comma2a() => ()
       case YYNTerror(s) => throw new YYError(s)
     }
   }
@@ -473,8 +473,8 @@ class CoolParser extends CoolParserBase {
   private def yyrule4(yyarg1 : Classes) : Classes = {
     var yyresult : Classes = null;
     parse_YYCHAR(';');
-    { yyresult = yyarg1; 
-		  yyerror("deleted semicolon after class declaration"); }
+    { yyresult = yyarg1;
+      yyerror("deleted semicolon after class declaration"); }
     yyresult
   }
 
@@ -508,9 +508,16 @@ class CoolParser extends CoolParserBase {
     parse_YYCHAR('{');
     val yyarg6 : Features = parse_feature_list();
     parse_YYCHAR('}');
-    { yyresult = class_decl(yyarg2,yyarg4,
-				  make_constructor(yyarg2,yyarg3).concat(yyarg6),
-				  symbol(filename)); }
+    { if (yyarg2 == symbol("Int") ||
+      yyarg2 == symbol("String") ||
+      yyarg2 == symbol("Boolean") ||
+      yyarg2 == symbol("Symbol") ||
+      yyarg2 == symbol("ArrayAny")) {
+      native_constructor();
+    }
+      yyresult = class_decl(yyarg2,yyarg4,
+        make_constructor(yyarg2,yyarg3).concat(yyarg6),
+        symbol(filename)); }
     yyresult
   }
 
@@ -549,8 +556,8 @@ class CoolParser extends CoolParserBase {
    */
   private def yyrule11() : Formals = {
     var yyresult : Formals = null;
-    { yyerror("Need var formals for class declaration"); 
-		  yyresult = new Formals_nil(); }
+    { yyerror("Need var formals for class declaration");
+      yyresult = new Formals_nil(); }
     yyresult
   }
 
@@ -621,9 +628,9 @@ class CoolParser extends CoolParserBase {
    */
   private def yyrule19() : Symbol = {
     var yyresult : Symbol = null;
-    { superclass_name = symbol("Any"); 
-                  yyresult = superclass_name;
-                  add_supercall(superclass_name,new Expressions_nil()); }
+    { superclass_name = symbol("Any");
+      yyresult = superclass_name;
+      add_supercall(superclass_name,new Expressions_nil()); }
     yyresult
   }
 
@@ -633,12 +640,12 @@ class CoolParser extends CoolParserBase {
   private def yyrule20(yyarg2 : Symbol) : Symbol = {
     var yyresult : Symbol = null;
     val yyarg3 : Expressions = parse_actuals();
-    { superclass_name = yyarg2; 
-		  if (superclass_name == symbol("Any")) {
-		    yyerror("Cannot explicitly extend 'Any'");
-		  } else {};
-		  yyresult = superclass_name;
-		  add_supercall(yyarg2,yyarg3); }
+    { superclass_name = yyarg2;
+      if (superclass_name == symbol("Any")) {
+        yyerror("Cannot explicitly extend 'Any'");
+      } else {};
+      yyresult = superclass_name;
+      add_supercall(yyarg2,yyarg3); }
     yyresult
   }
 
@@ -647,9 +654,9 @@ class CoolParser extends CoolParserBase {
    */
   private def yyrule21(yyarg2 : Symbol) : Symbol = {
     var yyresult : Symbol = null;
-    { superclass_name = yyarg2; 
-		  yyresult = superclass_name;
-		  yyerror("Need actuals in class extension"); }
+    { superclass_name = yyarg2;
+      yyresult = superclass_name;
+      yyerror("Need actuals in class extension"); }
     yyresult
   }
 
@@ -659,9 +666,9 @@ class CoolParser extends CoolParserBase {
   private def yyrule22() : Symbol = {
     var yyresult : Symbol = null;
     parse_NATIVE();
-    { superclass_name = Symbol("native"); 
-		  yyresult = superclass_name;
-		  native_constructor(); }
+    { superclass_name = Symbol("native");
+      yyresult = superclass_name;
+      native_constructor(); }
     yyresult
   }
 
@@ -710,7 +717,7 @@ class CoolParser extends CoolParserBase {
     var yyresult : Features = null;
     parse_YYCHAR(';');
     { add_to_constructor(yyarg3);
-		  yyresult = yyarg1; }
+      yyresult = yyarg1; }
     yyresult
   }
 
@@ -720,8 +727,8 @@ class CoolParser extends CoolParserBase {
   private def yyrule28(yyarg1 : Features, yyarg3 : Expression) : Features = {
     var yyresult : Features = null;
     { yyerror("need semicolon after initialization block");
-		  add_to_constructor(yyarg3);
-		  yyresult = yyarg1; }
+      add_to_constructor(yyarg3);
+      yyresult = yyarg1; }
     yyresult
   }
 
@@ -749,7 +756,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule31(yyarg2 : Symbol, yyarg4 : Symbol, yyarg6 : Expression) : Feature = {
     var yyresult : Feature = null;
     { yyresult = attr(yyarg2,yyarg4);
-		  add_to_constructor(attr_init(yyarg2,yyarg6)); }
+      add_to_constructor(attr_init(yyarg2,yyarg6)); }
     yyresult
   }
 
@@ -759,11 +766,11 @@ class CoolParser extends CoolParserBase {
   private def yyrule32(yyarg2 : Symbol) : Feature = {
     var yyresult : Feature = null;
     { yyresult = attr(yyarg2,symbol("Any"));
-		  /* if you have a native field, you cannot be inherited */
-		  current_inherit_status = false; 
-		  /* and your constructor is native */
-		  native_constructor();
-		}
+      /* if you have a native field, you cannot be inherited */
+      current_inherit_status = false;
+      /* and your constructor is native */
+      native_constructor();
+    }
     yyresult
   }
 
@@ -772,8 +779,8 @@ class CoolParser extends CoolParserBase {
    */
   private def yyrule33(yyarg1 : Boolean, yyarg3 : Symbol, yyarg4 : Formals, yyarg6 : Expression) : Feature = {
     var yyresult : Feature = null;
-    { yyresult = method(yyarg1,yyarg3,yyarg4,symbol("Unit"),yyarg6); 
-		  yyerror("Missing return type for method"); }
+    { yyresult = method(yyarg1,yyarg3,yyarg4,symbol("Unit"),yyarg6);
+      yyerror("Missing return type for method"); }
     yyresult
   }
 
@@ -782,8 +789,8 @@ class CoolParser extends CoolParserBase {
    */
   private def yyrule34(yyarg2 : Symbol, yyarg4 : Expression) : Feature = {
     var yyresult : Feature = null;
-    { yyerror("Attribute type cannot be inferred"); 
-                  yyresult = attr(yyarg2,symbol("ignore")); }
+    { yyerror("Attribute type cannot be inferred");
+      yyresult = attr(yyarg2,symbol("ignore")); }
     yyresult
   }
 
@@ -792,8 +799,8 @@ class CoolParser extends CoolParserBase {
    */
   private def yyrule35(yyarg2 : Symbol, yyarg4 : Symbol) : Feature = {
     var yyresult : Feature = null;
-    { yyerror("Attributes must be initialized"); 
-                  yyresult = attr(yyarg2,yyarg4); }
+    { yyerror("Attributes must be initialized");
+      yyresult = attr(yyarg2,yyarg4); }
     yyresult
   }
 
@@ -804,7 +811,7 @@ class CoolParser extends CoolParserBase {
     var yyresult : Feature = null;
     val yyarg1 : Class = parse_class_decl();
     { yyerror("classes may not be nested");
-		  yyresult = attr(symbol("ignore"),symbol("ignore")); }
+      yyresult = attr(symbol("ignore"),symbol("ignore")); }
     yyresult
   }
 
@@ -900,7 +907,7 @@ class CoolParser extends CoolParserBase {
     parse_YYCHAR(':');
     val yyarg4 : Symbol = parse_TYPEID();
     { yyresult = formal(yyarg2,yyarg4);
-		  yyerror("Method formals must not be 'var'"); }
+      yyerror("Method formals must not be 'var'"); }
     yyresult
   }
 
@@ -919,7 +926,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule47(yyarg3 : Symbol, yyarg4 : Expressions) : Expression = {
     var yyresult : Expression = null;
     { val this_obj : Expression = variable(symbol("this"));
-	    yyresult = static_dispatch(this_obj,superclass_name,yyarg3,yyarg4); }
+      yyresult = static_dispatch(this_obj,superclass_name,yyarg3,yyarg4); }
     yyresult
   }
 
@@ -947,7 +954,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule50(yyarg3 : Expression, yyarg5 : Expression) : Expression = {
     var yyresult : Expression = null;
     { yyerror("Missing 'else'");
-	    yyresult = cond(yyarg3,yyarg5,unit()); }
+      yyresult = cond(yyarg3,yyarg5,unit()); }
     yyresult
   }
 
@@ -1160,9 +1167,9 @@ class CoolParser extends CoolParserBase {
   private def yyrule72(yyarg1 : Symbol) : Expression = {
     var yyresult : Expression = null;
     val yyarg2 : Expressions = parse_actuals();
-    { 
-	    yyresult = implicit_dispatch(variable(symbol("this")),yyarg1,yyarg2); 
-	  }
+    {
+      yyresult = implicit_dispatch(variable(symbol("this")),yyarg1,yyarg2);
+    }
     yyresult
   }
 
@@ -1181,7 +1188,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule74(yyarg3 : Symbol, yyarg4 : Expressions) : Expression = {
     var yyresult : Expression = null;
     { val this_obj : Expression = variable(symbol("this"));
-	    yyresult = static_dispatch(this_obj,superclass_name,yyarg3,yyarg4); }
+      yyresult = static_dispatch(this_obj,superclass_name,yyarg3,yyarg4); }
     yyresult
   }
 
@@ -1209,7 +1216,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule77(yyarg3 : Expression, yyarg5 : Expression) : Expression = {
     var yyresult : Expression = null;
     { yyerror("Missing 'else'");
-	    yyresult = cond(yyarg3,yyarg5,unit()); }
+      yyresult = cond(yyarg3,yyarg5,unit()); }
     yyresult
   }
 
@@ -1392,9 +1399,9 @@ class CoolParser extends CoolParserBase {
   private def yyrule96(yyarg1 : Symbol) : Expression = {
     var yyresult : Expression = null;
     val yyarg2 : Expressions = parse_actuals();
-    { 
-	    yyresult = dispatch(variable(symbol("this")),yyarg1,yyarg2); 
-	  }
+    {
+      yyresult = dispatch(variable(symbol("this")),yyarg1,yyarg2);
+    }
     yyresult
   }
 
@@ -1513,7 +1520,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule113(yyarg1 : Expression) : Expressions = {
     var yyresult : Expressions = null;
     { yyerror("deleted semicolon");
-	    yyresult = new Expressions_one(yyarg1); }
+      yyresult = new Expressions_one(yyarg1); }
     yyresult
   }
 
@@ -1553,7 +1560,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule117(yyarg2 : Symbol, yyarg3 : Symbol, yyarg4 : Expression) : Expressions = {
     var yyresult : Expressions = null;
     { yyerror("local variable cannot be last in a block");
-	    yyresult = new Expressions_one(let(yyarg2,yyarg3,yyarg4,unit())); }
+      yyresult = new Expressions_one(let(yyarg2,yyarg3,yyarg4,unit())); }
     yyresult
   }
 
@@ -1609,7 +1616,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule124(yyarg1 : Expression) : Expressions = {
     var yyresult : Expressions = null;
     { yyerror("deleted semicolon");
-	    yyresult = new Expressions_one(yyarg1); }
+      yyresult = new Expressions_one(yyarg1); }
     yyresult
   }
 
@@ -1649,7 +1656,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule128(yyarg2 : Symbol, yyarg3 : Symbol, yyarg4 : Expression) : Expressions = {
     var yyresult : Expressions = null;
     { yyerror("local variable cannot be last in a block");
-	    yyresult = new Expressions_one(let(yyarg2,yyarg3,yyarg4,unit())); }
+      yyresult = new Expressions_one(let(yyarg2,yyarg3,yyarg4,unit())); }
     yyresult
   }
 
@@ -1716,7 +1723,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule136() : Symbol = {
     var yyresult : Symbol = null;
     { yyerror("local variable must be typed");
-		  yyresult = symbol("Any"); }
+      yyresult = symbol("Any"); }
     yyresult
   }
 
@@ -1735,7 +1742,7 @@ class CoolParser extends CoolParserBase {
   private def yyrule138() : Expression = {
     var yyresult : Expression = null;
     { yyerror("local variable must be initialized");
-		  yyresult = no_expr(); }
+      yyresult = no_expr(); }
     yyresult
   }
 
@@ -1989,260 +1996,89 @@ class CoolParser extends CoolParserBase {
     { yyerror("deleted extraneous comma before actuals"); }
   }
 
-  private def yystate213(yyarg1: Cases) : Int = {
+  private def yystate113(yyarg1: Formal) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTsimple_cases(yyarg1); yygoto = 2;
-      case CoolTokens.CASE() => yynt = YYNTsimple_cases(yyrule148(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR(',') => yynt = YYNTformal(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR(')') => yynt = YYNTformal(yyarg1); yygoto = 2;
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case _:YYNTsimple_cases => return 0;
+        case _:YYNTformal => return 0;
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate212() : Int = {
+  private def yystate112() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.CASE() => yynt = YYNTsimple_cases(yyrule147()); yygoto = 0
+      case CoolTokens.VAR() => yynt = YYNTformal(yyrule45()); yygoto = 0
+      case CoolTokens.OBJECTID(_) => yynt = YYNTformal(yyrule44()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTsimple_cases(yyarg1) => yygoto = yystate213(yyarg1);
+        case YYNTformal(yyarg1) => yygoto = yystate113(yyarg1);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate5() : Int = {
+  private def yystate211() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case _ => yynt = YYNTclass_list(yyrule5()); yygoto = 1
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate4(yyarg1: Classes) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yynt = YYNTclass_list(yyrule6(yyarg1)); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate3(yyarg1: Classes) : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.CLASS() => yynt = YYNTclass_list(yyrule3(yyarg1)); yygoto = 1
-      case CoolTokens.YYEOF() => yynt = YYNTclass_list(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR(';') => yynt = YYNTclass_list(yyrule4(yyarg1)); yygoto = 1
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.YYEOF() => true
-            case CoolTokens.CLASS() => true
-            case CoolTokens.YYCHAR(';') => true
-            case _ => false
-          }})
-          yygoto = yystate4(yyarg1);
-        case _:YYNTclass_list => return 0;
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate2() : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.CLASS() => yynt = YYNTclass_list(yyrule2()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.YYEOF() => true
-            case CoolTokens.CLASS() => true
-            case CoolTokens.YYCHAR(';') => true
-            case _ => false
-          }})
-          yygoto = yystate5();
-        case YYNTclass_list(yyarg1) => yygoto = yystate3(yyarg1);
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate10() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formals(yyrule10()); yygoto = 2
+      case CoolTokens.NEW() => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.NULL() => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.OBJECTID(_) => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.IF() => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.YYCHAR('-') => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.YYCHAR('!') => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.SUPER() => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.STR_LIT(_) => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.WHILE() => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.THIS() => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.YYCHAR('(') => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.INT_LIT(_) => yynt = YYNTno_comma3a(); yygoto = 2;
+      case CoolTokens.YYCHAR('{') => yynt = YYNTno_comma3a(); yygoto = 2;
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
+        case _:YYNTno_comma3a => return 0;
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate13(yyarg1: Formals) : Int = {
+  private def yystate210() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR(')') => yyrule152(); yynt = YYNTno_comma1(); yygoto = 1
-      case CoolTokens.YYCHAR(',') => yynt = YYNTvar_formal_list(yyrule13(yyarg1)); yygoto = 2
-      case _ => yynt = YYNTvar_formal_list(yyrule13(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR(',') => yyrule162(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.NEW() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.NULL() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.OBJECTID(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.IF() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.YYCHAR('-') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.YYCHAR('!') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.SUPER() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.STR_LIT(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.WHILE() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.THIS() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.INT_LIT(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
+      case _ => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
     }
     while (yygoto == 0) {
       yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate14(yyarg3: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formals(yyrule9(yyarg3)); yygoto = 4
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate12(yyarg3: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(',') => yynext; yygoto = yystate13(yyarg3);
-      case _ => yyrule151(); yynt = YYNTno_comma1(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTno_comma1() => yygoto = yystate14(yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate11() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formals(yyrule8()); yygoto = 2
-      case CoolTokens.VAR() => yynt = YYNTvar_formal_list(yyrule12()); yygoto = 0
-      case _ => yynt = YYNTvar_formal_list(yyrule12()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_formal_list(yyarg3) => yygoto = yystate12(yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate9() : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yyrule163(); yynt = YYNTno_comma1b(); yygoto = 0
-      case CoolTokens.YYCHAR(')') => yyrule163(); yynt = YYNTno_comma1b(); yygoto = 0
-      case CoolTokens.VAR() => yyrule163(); yynt = YYNTno_comma1b(); yygoto = 0
-      case CoolTokens.YYCHAR(',') => yyrule164(); yynt = YYNTno_comma1b(); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.YYCHAR(')') => true
-            case _ => false
-          }})
-          yygoto = yystate10();
-        case YYNTno_comma1b() => yygoto = yystate11();
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate15(yyarg1: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EXTENDS() => yynt = YYNTvar_formals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('{') => yynt = YYNTvar_formals(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTvar_formals => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate8() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EXTENDS() => yynt = YYNTvar_formals(yyrule11()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTvar_formals(yyrule11()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate9();
-      case _ => yynt = YYNTvar_formals(yyrule11()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_formals(yyarg1) => yygoto = yystate15(yyarg1);
+        case YYNTno_comma3a() => yygoto = yystate211();
         case _:YYNTerror => return 0;
       }
     }
@@ -2253,14 +2089,14 @@ class CoolParser extends CoolParserBase {
     var yygoto : Int = 0;
     yycur match {
       case CoolTokens.CLASS() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
-      case CoolTokens.OVERRIDE() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('}') => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
-      case CoolTokens.YYEOF() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('{') => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
-      case CoolTokens.OBJECTID(_) => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
-      case CoolTokens.VAR() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
-      case CoolTokens.DEF() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
       case CoolTokens.YYCHAR(';') => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
+      case CoolTokens.VAR() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
+      case CoolTokens.OVERRIDE() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
+      case CoolTokens.YYEOF() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('}') => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
+      case CoolTokens.OBJECTID(_) => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
+      case CoolTokens.DEF() => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('{') => yynt = YYNTclass_decl(yyarg1); yygoto = 2;
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
@@ -2287,71 +2123,11 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate113(yyarg1: Formal) : Int = {
+  private def yystate52(yyarg1: Expressions) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR(')') => yynt = YYNTformal(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR(',') => yynt = YYNTformal(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTformal => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate112() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yynt = YYNTformal(yyrule44()); yygoto = 0
-      case CoolTokens.VAR() => yynt = YYNTformal(yyrule45()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTformal(yyarg1) => yygoto = yystate113(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate30() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.YYCHAR('(') => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.YYCHAR(')') => yynt = YYNTexpr(yyrule65()); yygoto = 1
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.OBJECTID(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.YYCHAR('-') => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.WHILE() => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.YYCHAR('!') => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.SUPER() => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case CoolTokens.IF() => yynt = YYNTexpr(yyrule64()); yygoto = 1
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate45(yyarg1: Expressions) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yyrule156(); yynt = YYNTno_comma3(); yygoto = 1
       case CoolTokens.YYCHAR(',') => yynt = YYNTexp_list(yyrule142(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR(')') => yyrule156(); yynt = YYNTno_comma3(); yygoto = 1
       case _ => yynt = YYNTexp_list(yyrule142(yyarg1)); yygoto = 2
     }
     while (yygoto == 0) {
@@ -2362,7 +2138,7 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate46(yyarg3: Expressions) : Int = {
+  private def yystate53(yyarg3: Expressions) : Int = {
     var yygoto : Int = 0;
     yycur match {
       case CoolTokens.YYCHAR(')') => yynt = YYNTactuals(yyrule140(yyarg3)); yygoto = 4
@@ -2376,51 +2152,51 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate44(yyarg3: Expressions) : Int = {
+  private def yystate51(yyarg3: Expressions) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR(',') => yynext; yygoto = yystate45(yyarg3);
+      case CoolTokens.YYCHAR(',') => yynext; yygoto = yystate52(yyarg3);
       case _ => yyrule155(); yynt = YYNTno_comma3(); yygoto = 0
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTno_comma3() => yygoto = yystate46(yyarg3);
+        case YYNTno_comma3() => yygoto = yystate53(yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate43() : Int = {
+  private def yystate50() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.YYCHAR(')') => yynt = YYNTactuals(yyrule139()); yygoto = 2
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.NEW() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
       case CoolTokens.BOOL_LIT(_) => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.OBJECTID(_) => yynt = YYNTexp_list(yyrule141()); yygoto = 0
       case CoolTokens.NULL() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.YYCHAR(')') => yynt = YYNTactuals(yyrule139()); yygoto = 2
+      case CoolTokens.OBJECTID(_) => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.IF() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
       case CoolTokens.YYCHAR('-') => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.WHILE() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.THIS() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
       case CoolTokens.YYCHAR('!') => yynt = YYNTexp_list(yyrule141()); yygoto = 0
       case CoolTokens.SUPER() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.NEW() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
-      case CoolTokens.IF() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.WHILE() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.THIS() => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexp_list(yyrule141()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexp_list(yyrule141()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexp_list(yyarg3) => yygoto = yystate44(yyarg3);
+        case YYNTexp_list(yyarg3) => yygoto = yystate51(yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate42() : Int = {
+  private def yystate49() : Int = {
     var yygoto : Int = 0;
     yycur match {
       case CoolTokens.YYCHAR(',') => yyrule168(); yynt = YYNTno_comma3b(); yygoto = 0
@@ -2428,14 +2204,14 @@ class CoolParser extends CoolParserBase {
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTno_comma3b() => yygoto = yystate43();
+        case YYNTno_comma3b() => yygoto = yystate50();
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate47(yyarg3: Symbol, yyarg4: Expressions) : Int = {
+  private def yystate54(yyarg3: Symbol, yyarg4: Expressions) : Int = {
     var yygoto : Int = 0;
     yycur match {
       case _ => yynt = YYNTexpr(yyrule47(yyarg3,yyarg4)); yygoto = 4
@@ -2448,39 +2224,25 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate41(yyarg3: Symbol) : Int = {
+  private def yystate48(yyarg3: Symbol) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate49();
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTactuals(yyarg4) => yygoto = yystate47(yyarg3,yyarg4);
+        case YYNTactuals(yyarg4) => yygoto = yystate54(yyarg3,yyarg4);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate40() : Int = {
+  private def yystate47() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate41(yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate39() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate40();
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate48(yyarg3);
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
@@ -2491,7 +2253,49 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate55(yyarg1: Expression, yyarg3: Symbol, yyarg4: Expressions) : Int = {
+  private def yystate46() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate47();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate57() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.YYCHAR(')') => yynt = YYNTexpr(yyrule65()); yygoto = 1
+      case CoolTokens.OBJECTID(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.IF() => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.YYCHAR('-') => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.YYCHAR('!') => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.SUPER() => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.WHILE() => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.YYCHAR('(') => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule64()); yygoto = 1
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate67(yyarg1: Expression, yyarg3: Symbol, yyarg4: Expressions) : Int = {
     var yygoto : Int = 0;
     yycur match {
       case _ => yynt = YYNTexpr(yyrule48(yyarg1,yyarg3,yyarg4)); yygoto = 4
@@ -2504,25 +2308,25 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate54(yyarg1: Expression, yyarg3: Symbol) : Int = {
+  private def yystate66(yyarg1: Expression, yyarg3: Symbol) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate49();
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTactuals(yyarg4) => yygoto = yystate55(yyarg1,yyarg3,yyarg4);
+        case YYNTactuals(yyarg4) => yygoto = yystate67(yyarg1,yyarg3,yyarg4);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate53(yyarg1: Expression) : Int = {
+  private def yystate65(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate54(yyarg1,yyarg3);
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate66(yyarg1,yyarg3);
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
@@ -2533,10 +2337,10 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate52(yyarg1: Expression, yyarg3: Expression) : Int = {
+  private def yystate64(yyarg1: Expression, yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
       case _ => yynt = YYNTexpr(yyrule58(yyarg1,yyarg3)); yygoto = 3
     }
     while (yygoto == 0) {
@@ -2547,38 +2351,38 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate51(yyarg1: Expression) : Int = {
+  private def yystate63(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate52(yyarg1,yyarg3);
+        case YYNTexpr(yyarg3) => yygoto = yystate64(yyarg1,yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate57(yyarg1: Expression, yyarg3: Expression) : Int = {
+  private def yystate69(yyarg1: Expression, yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
       case _ => yynt = YYNTexpr(yyrule57(yyarg1,yyarg3)); yygoto = 3
     }
     while (yygoto == 0) {
@@ -2589,84 +2393,40 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate56(yyarg1: Expression) : Int = {
+  private def yystate68(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate57(yyarg1,yyarg3);
+        case YYNTexpr(yyarg3) => yygoto = yystate69(yyarg1,yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate59(yyarg1: Expression, yyarg3: Expression) : Int = {
+  private def yystate62(yyarg1: Expression, yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case _ => yynt = YYNTexpr(yyrule56(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate58(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate59(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate61(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
       case _ => yynt = YYNTexpr(yyrule55(yyarg1,yyarg3)); yygoto = 3
     }
     while (yygoto == 0) {
@@ -2677,42 +2437,86 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate60(yyarg1: Expression) : Int = {
+  private def yystate61(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate61(yyarg1,yyarg3);
+        case YYNTexpr(yyarg3) => yygoto = yystate62(yyarg1,yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate50(yyarg1: Expression, yyarg3: Expression) : Int = {
+  private def yystate71(yyarg1: Expression, yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTexpr(yyrule56(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate70(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate71(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate60(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
       case _ => yynt = YYNTexpr(yyrule61(yyarg1,yyarg3)); yygoto = 3
     }
     while (yygoto == 0) {
@@ -2723,43 +2527,43 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate49(yyarg1: Expression) : Int = {
+  private def yystate59(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate50(yyarg1,yyarg3);
+        case YYNTexpr(yyarg3) => yygoto = yystate60(yyarg1,yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate63(yyarg1: Expression, yyarg3: Expression) : Int = {
+  private def yystate73(yyarg1: Expression, yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
       case _ => yynt = YYNTexpr(yyrule62(yyarg1,yyarg3)); yygoto = 3
     }
     while (yygoto == 0) {
@@ -2770,43 +2574,43 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate62(yyarg1: Expression) : Int = {
+  private def yystate72(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate63(yyarg1,yyarg3);
+        case YYNTexpr(yyarg3) => yygoto = yystate73(yyarg1,yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate67(yyarg1: Expression, yyarg3: Expression) : Int = {
+  private def yystate75(yyarg1: Expression, yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
       case _ => yynt = YYNTexpr(yyrule60(yyarg1,yyarg3)); yygoto = 3
     }
     while (yygoto == 0) {
@@ -2817,35 +2621,65 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate66(yyarg1: Expression) : Int = {
+  private def yystate74(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate67(yyarg1,yyarg3);
+        case YYNTexpr(yyarg3) => yygoto = yystate75(yyarg1,yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate73(yyarg1: Expression, yyarg4: Cases) : Int = {
+  private def yystate80() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.VAR() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.NULL() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.OBJECTID(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.IF() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.ARROW() => yynt = YYNTcase_list(yyrule145()); yygoto = 1
+      case CoolTokens.YYCHAR('-') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.YYCHAR('!') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.SUPER() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.STR_LIT(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.WHILE() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.THIS() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.YYCHAR('(') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.INT_LIT(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case CoolTokens.YYCHAR('{') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate82(yyarg1: Expression, yyarg4: Cases) : Int = {
     var yygoto : Int = 0;
     yycur match {
       case _ => yynt = YYNTexpr(yyrule53(yyarg1,yyarg4)); yygoto = 5
@@ -2858,10 +2692,10 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate72(yyarg1: Expression, yyarg4: Cases) : Int = {
+  private def yystate81(yyarg1: Expression, yyarg4: Cases) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate73(yyarg1,yyarg4);
+      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate82(yyarg1,yyarg4);
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
@@ -2872,75 +2706,45 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate74() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.ARROW() => yynt = YYNTcase_list(yyrule145()); yygoto = 1
-      case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.STR_LIT(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.YYCHAR('{') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.YYCHAR('(') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.INT_LIT(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.OBJECTID(_) => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.VAR() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.NULL() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.YYCHAR('-') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.WHILE() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.THIS() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.YYCHAR('!') => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.SUPER() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.NEW() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case CoolTokens.IF() => yynt = YYNTcase_list(yyrule146()); yygoto = 1
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate71(yyarg1: Expression) : Int = {
+  private def yystate79(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     try {
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule144()); yygoto = 0
-      case CoolTokens.CASE() => yynt = YYNTcase_list(yyrule143()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
+      yycur match {
+        case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule144()); yygoto = 0
+        case CoolTokens.CASE() => yynt = YYNTcase_list(yyrule143()); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
     } catch {
       case YYError(s) => yynt = YYNTerror(s);
     }
     while (yygoto == 0) {
       try {
-      yynt match {
-        case YYNTcase_list(yyarg4) => yygoto = yystate72(yyarg1,yyarg4);
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.WHILE() => true
-            case CoolTokens.VAR() => true
-            case CoolTokens.NULL() => true
-            case CoolTokens.STR_LIT(_) => true
-            case CoolTokens.NEW() => true
-            case CoolTokens.YYCHAR('-') => true
-            case CoolTokens.THIS() => true
-            case CoolTokens.YYCHAR('!') => true
-            case CoolTokens.YYCHAR('}') => true
-            case CoolTokens.OBJECTID(_) => true
-            case CoolTokens.YYCHAR('{') => true
-            case CoolTokens.YYCHAR('(') => true
-            case CoolTokens.SUPER() => true
-            case CoolTokens.INT_LIT(_) => true
-            case CoolTokens.IF() => true
-            case CoolTokens.ARROW() => true
-            case CoolTokens.BOOL_LIT(_) => true
-            case _ => false
-          }})
-          yygoto = yystate74();
-      }
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYCHAR('-') => true
+              case CoolTokens.ARROW() => true
+              case CoolTokens.SUPER() => true
+              case CoolTokens.YYCHAR('(') => true
+              case CoolTokens.STR_LIT(_) => true
+              case CoolTokens.THIS() => true
+              case CoolTokens.YYCHAR('!') => true
+              case CoolTokens.NEW() => true
+              case CoolTokens.IF() => true
+              case CoolTokens.WHILE() => true
+              case CoolTokens.BOOL_LIT(_) => true
+              case CoolTokens.NULL() => true
+              case CoolTokens.OBJECTID(_) => true
+              case CoolTokens.VAR() => true
+              case CoolTokens.YYCHAR('{') => true
+              case CoolTokens.INT_LIT(_) => true
+              case CoolTokens.YYCHAR('}') => true
+              case _ => false
+            }})
+            yygoto = yystate80();
+          case YYNTcase_list(yyarg4) => yygoto = yystate81(yyarg1,yyarg4);
+        }
       } catch {
         case YYError(s) => yynt = YYNTerror(s);
       }
@@ -2948,10 +2752,10 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate70(yyarg1: Expression) : Int = {
+  private def yystate78(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate71(yyarg1);
+      case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate79(yyarg1);
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
@@ -2962,226 +2766,18 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate69(yyarg3: Expression, yyarg5: Expression, yyarg7: Expression) : Int = {
+  private def yystate77(yyarg3: Expression, yyarg5: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg7);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg7);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg7);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg7);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg7);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg7);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg7);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg7);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg7);
-      case _ => yynt = YYNTexpr(yyrule49(yyarg3,yyarg5,yyarg7)); yygoto = 7
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate68(yyarg3: Expression, yyarg5: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg7) => yynext; yygoto = yystate31(yyarg7);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg7) => yygoto = yystate69(yyarg3,yyarg5,yyarg7);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate65(yyarg3: Expression, yyarg5: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg5);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg5);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg5);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg5);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg5);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg5);
-      case CoolTokens.ELSE() => yynext; yygoto = yystate68(yyarg3,yyarg5);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg5);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg5);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg5);
-      case _ => yynt = YYNTexpr(yyrule50(yyarg3,yyarg5)); yygoto = 5
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate64(yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate31(yyarg5);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg5) => yygoto = yystate65(yyarg3,yyarg5);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate48(yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate64(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg3);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate38() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate48(yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate37() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate38();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate75(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case _ => yynt = YYNTexpr(yyrule63(yyarg2)); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate36() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate75(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate78(yyarg3: Expression, yyarg5: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg5);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg5);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg5);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg5);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg5);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg5);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg5);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg5);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg5);
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg5);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg5);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg5);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg5);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg5);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg5);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg5);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg5);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg5);
       case _ => yynt = YYNTexpr(yyrule51(yyarg3,yyarg5)); yygoto = 5
     }
     while (yygoto == 0) {
@@ -3192,89 +2788,47 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate77(yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate31(yyarg5);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg5) => yygoto = yystate78(yyarg3,yyarg5);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
   private def yystate76(yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate77(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg3);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate35() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate40(yyarg5);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate76(yyarg3);
+        case YYNTexpr(yyarg5) => yygoto = yystate77(yyarg3,yyarg5);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate34() : Int = {
+  private def yystate58(yyarg3: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate35();
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg3);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate76(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
@@ -3285,10 +2839,94 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate79(yyarg2: Expression) : Int = {
+  private def yystate56() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate58(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate55() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate56();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate83(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case _ => yynt = YYNTexpr(yyrule63(yyarg2)); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate45() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate83(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate84(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
       case _ => yynt = YYNTexpr(yyrule59(yyarg2)); yygoto = 2
     }
     while (yygoto == 0) {
@@ -3299,46 +2937,212 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate33() : Int = {
+  private def yystate44() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate79(yyarg2);
+        case YYNTexpr(yyarg2) => yygoto = yystate84(yyarg2);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate80(yyarg1: Symbol, yyarg3: Expression) : Int = {
+  private def yystate89(yyarg3: Expression, yyarg5: Expression, yyarg7: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg3);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg7);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg7);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg7);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg7);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg7);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg7);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg7);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg7);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg7);
+      case _ => yynt = YYNTexpr(yyrule49(yyarg3,yyarg5,yyarg7)); yygoto = 7
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate88(yyarg3: Expression, yyarg5: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg7) => yynext; yygoto = yystate40(yyarg7);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg7) => yygoto = yystate89(yyarg3,yyarg5,yyarg7);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate87(yyarg3: Expression, yyarg5: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg5);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg5);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg5);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg5);
+      case CoolTokens.ELSE() => yynext; yygoto = yystate88(yyarg3,yyarg5);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg5);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg5);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg5);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg5);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg5);
+      case _ => yynt = YYNTexpr(yyrule50(yyarg3,yyarg5)); yygoto = 5
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate86(yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate40(yyarg5);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg5) => yygoto = yystate87(yyarg3,yyarg5);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate85(yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg3);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate86(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate43() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate85(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate42() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate43();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate90(yyarg1: Symbol, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg3);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
       case _ => yynt = YYNTexpr(yyrule46(yyarg1,yyarg3)); yygoto = 3
     }
     while (yygoto == 0) {
@@ -3349,2893 +3153,43 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-  private def yystate32(yyarg1: Symbol) : Int = {
+  private def yystate41(yyarg1: Symbol) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate80(yyarg1,yyarg3);
+        case YYNTexpr(yyarg3) => yygoto = yystate90(yyarg1,yyarg3);
         case _:YYNTerror => return 0;
       }
     }
     yygoto-1
   }
 
-  private def yystate31(yyarg1: Symbol) : Int = {
+  private def yystate40(yyarg1: Symbol) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate32(yyarg1);
       case CoolTokens.YYCHAR('(') => yynt = YYNTexpr(yyrule72(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate41(yyarg1);
       case _ => yynt = YYNTexpr(yyrule71(yyarg1)); yygoto = 1
     }
     while (yygoto == 0) {
       yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate126(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yynt = YYNTvar_init(yyrule137(yyarg2)); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate125() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate126(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate157(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTvar_init(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTvar_init => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate156() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate125();
-      case CoolTokens.YYCHAR(';') => yynt = YYNTvar_init(yyrule138()); yygoto = 0
-      case _ => yynt = YYNTvar_init(yyrule138()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_init(yyarg1) => yygoto = yystate157(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate1() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYEOF() => yynt = YYNTprogram(); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTprogram => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate0() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.CLASS() => yyrule1(); yynt = YYNTprogram(); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTprogram() => yygoto = yystate1();
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate107() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yynt = YYNTno_comma1a(); yygoto = 2;
-      case CoolTokens.VAR() => yynt = YYNTno_comma1a(); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTno_comma1a => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate106() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yyrule157(); yynt = YYNTno_comma1a(); yygoto = 0
-      case CoolTokens.VAR() => yyrule157(); yynt = YYNTno_comma1a(); yygoto = 0
-      case CoolTokens.YYCHAR(',') => yyrule158(); yynt = YYNTno_comma1a(); yygoto = 0
-      case _ => yyrule157(); yynt = YYNTno_comma1a(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTno_comma1a() => yygoto = yystate107();
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate24(yyarg1: Features, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTfeature_list(yyrule27(yyarg1,yyarg3)); yygoto = 4
-      case _ => yynt = YYNTfeature_list(yyrule28(yyarg1,yyarg3)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate23(yyarg1: Features, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate24(yyarg1,yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate22(yyarg1: Features) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTblock(yyrule111()); yygoto = 0
-      case CoolTokens.STR_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.INT_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.OBJECTID(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.VAR() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.NULL() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.WHILE() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.THIS() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.SUPER() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.NEW() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.IF() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTblock(yyarg3) => yygoto = yystate23(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate25(yyarg1: Features) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTfeature_list(yyrule25(yyarg1)); yygoto = 2
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate26(yyarg1: Features, yyarg2: Feature) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTfeature_list(yyrule24(yyarg1,yyarg2)); yygoto = 2
-      case _ => yynt = YYNTfeature_list(yyrule26(yyarg1,yyarg2)); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate81(yyarg2: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yynt = YYNTfeature(yyrule32(yyarg2)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate82(yyarg2: Symbol, yyarg4: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg4);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg4);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg4);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg4);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg4);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg4);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg4);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg4);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg4);
-      case _ => yynt = YYNTfeature(yyrule34(yyarg2,yyarg4)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate29(yyarg2: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg4) => yynext; yygoto = yystate31(yyarg4);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case CoolTokens.NATIVE() => yynext; yygoto = yystate81(yyarg2);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg4) => yygoto = yystate82(yyarg2,yyarg4);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate86(yyarg2: Symbol, yyarg4: Symbol, yyarg6: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg6);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg6);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg6);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg6);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg6);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg6);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg6);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg6);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg6);
-      case _ => yynt = YYNTfeature(yyrule31(yyarg2,yyarg4,yyarg6)); yygoto = 6
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate85(yyarg2: Symbol, yyarg4: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg6) => yynext; yygoto = yystate31(yyarg6);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg6) => yygoto = yystate86(yyarg2,yyarg4,yyarg6);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate84(yyarg2: Symbol, yyarg4: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate85(yyarg2,yyarg4);
-      case _ => yynt = YYNTfeature(yyrule35(yyarg2,yyarg4)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate83(yyarg2: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.TYPEID(yyarg4) => yynext; yygoto = yystate84(yyarg2,yyarg4);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate28(yyarg2: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate29(yyarg2);
-      case CoolTokens.YYCHAR(':') => yynext; yygoto = yystate83(yyarg2);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate27() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate28(yyarg2);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate91() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yynt = YYNTformals(yyrule41()); yygoto = 2
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate94(yyarg1: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yyrule154(); yynt = YYNTno_comma2(); yygoto = 1
-      case CoolTokens.YYCHAR(',') => yynt = YYNTformal_list(yyrule43(yyarg1)); yygoto = 2
-      case _ => yynt = YYNTformal_list(yyrule43(yyarg1)); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate95(yyarg3: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yynt = YYNTformals(yyrule40(yyarg3)); yygoto = 4
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate93(yyarg3: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(',') => yynext; yygoto = yystate94(yyarg3);
-      case _ => yyrule153(); yynt = YYNTno_comma2(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTno_comma2() => yygoto = yystate95(yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate92() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yynt = YYNTformal_list(yyrule42()); yygoto = 0
-      case CoolTokens.YYCHAR(')') => yynt = YYNTformals(yyrule39()); yygoto = 2
-      case CoolTokens.VAR() => yynt = YYNTformal_list(yyrule42()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTformal_list(yyarg3) => yygoto = yystate93(yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate90() : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yyrule165(); yynt = YYNTno_comma2b(); yygoto = 0
-      case CoolTokens.YYCHAR(')') => yyrule165(); yynt = YYNTno_comma2b(); yygoto = 0
-      case CoolTokens.VAR() => yyrule165(); yynt = YYNTno_comma2b(); yygoto = 0
-      case CoolTokens.YYCHAR(',') => yyrule166(); yynt = YYNTno_comma2b(); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.YYCHAR(')') => true
-            case _ => false
-          }})
-          yygoto = yystate91();
-        case YYNTno_comma2b() => yygoto = yystate92();
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate98(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg6);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg6);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg6);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg6);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg6);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg6);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg6);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg6);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg6);
-      case _ => yynt = YYNTfeature(yyrule33(yyarg1,yyarg3,yyarg4,yyarg6)); yygoto = 6
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate97(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg6) => yynext; yygoto = yystate31(yyarg6);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg6) => yygoto = yystate98(yyarg1,yyarg3,yyarg4,yyarg6);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate102(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yynt = YYNTfeature(yyrule30(yyarg1,yyarg3,yyarg4,yyarg6)); yygoto = 8
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate103(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol, yyarg8: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg8);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg8);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg8);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg8);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg8);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg8);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg8);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg8);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg8);
-      case _ => yynt = YYNTfeature(yyrule29(yyarg1,yyarg3,yyarg4,yyarg6,yyarg8)); yygoto = 8
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate101(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg8) => yynext; yygoto = yystate31(yyarg8);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case CoolTokens.NATIVE() => yynext; yygoto = yystate102(yyarg1,yyarg3,yyarg4,yyarg6);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg8) => yygoto = yystate103(yyarg1,yyarg3,yyarg4,yyarg6,yyarg8);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate100(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate101(yyarg1,yyarg3,yyarg4,yyarg6);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate99(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.TYPEID(yyarg6) => yynext; yygoto = yystate100(yyarg1,yyarg3,yyarg4,yyarg6);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate96(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate97(yyarg1,yyarg3,yyarg4);
-      case CoolTokens.YYCHAR(':') => yynext; yygoto = yystate99(yyarg1,yyarg3,yyarg4);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate89(yyarg1: Boolean, yyarg3: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate90();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTformals(yyarg4) => yygoto = yystate96(yyarg1,yyarg3,yyarg4);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate88(yyarg1: Boolean) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate89(yyarg1,yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate87(yyarg1: Boolean) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.DEF() => yynext; yygoto = yystate88(yyarg1);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate21(yyarg1: Features) : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.CLASS() => yynt = YYNTfeature(yyrule36()); yygoto = 0
-      case CoolTokens.OVERRIDE() => yynt = YYNTopt_override(yyrule37()); yygoto = 0
-      case CoolTokens.YYCHAR('}') => yynt = YYNTfeature_list(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate22(yyarg1);
-      case CoolTokens.OBJECTID(_) => yyrule18(); yynt = YYNTvar2(); yygoto = 0
-      case CoolTokens.VAR() => yyrule17(); yynt = YYNTvar2(); yygoto = 0
-      case CoolTokens.DEF() => yynt = YYNTopt_override(yyrule38()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.YYCHAR(';') => true
-            case _ => false
-          }})
-          yygoto = yystate25(yyarg1);
-        case YYNTfeature(yyarg2) => yygoto = yystate26(yyarg1,yyarg2);
-        case YYNTvar2() => yygoto = yystate27();
-        case YYNTopt_override(yyarg2) => yygoto = yystate87(yyarg2);
-        case _:YYNTfeature_list => return 0;
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate20() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTfeature_list(yyrule23()); yygoto = 0
-      case _ => yynt = YYNTfeature_list(yyrule23()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTfeature_list(yyarg1) => yygoto = yystate21(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate121(yyarg1: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate32(yyarg1);
-      case CoolTokens.YYCHAR('(') => yynt = YYNTexpr(yyrule72(yyarg1)); yygoto = 1
-      case CoolTokens.YYCHAR(':') => yynt = YYNTstmt_list(yyrule119(yyarg1)); yygoto = 1
-      case _ => yynt = YYNTexpr(yyrule71(yyarg1)); yygoto = 1
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate127(yyarg2: Symbol, yyarg3: Symbol, yyarg4: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTstmt_list(yyrule116(yyarg2,yyarg3,yyarg4)); yygoto = 4
-      case _ => yynt = YYNTstmt_list(yyrule117(yyarg2,yyarg3,yyarg4)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate124(yyarg2: Symbol, yyarg3: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate125();
-      case _ => yynt = YYNTvar_init(yyrule138()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_init(yyarg4) => yygoto = yystate127(yyarg2,yyarg3,yyarg4);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate123(yyarg2: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(':') => yynt = YYNTvar_type(yyrule135()); yygoto = 0
-      case _ => yynt = YYNTvar_type(yyrule136()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_type(yyarg3) => yygoto = yystate124(yyarg2,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate122() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate123(yyarg2);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate130(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule109(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate129() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate130(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate132(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule107(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate131() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate132(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate134(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule110(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate133() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate134(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate137(yyarg2: Symbol, yyarg3: Expressions) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yyrule99(yyarg2,yyarg3); yynt = YYNTcexpr(); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate136(yyarg2: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate42();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTactuals(yyarg3) => yygoto = yystate137(yyarg2,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate135() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate136(yyarg2);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate139(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule98(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate138() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate139(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate141(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule106(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate140() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate141(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate143(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule105(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate142() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate143(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate145(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule108(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate144() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate145(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate147(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg2);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg2);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg2);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg2);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg2);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg2);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg2);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg2);
-      case _ => yyrule104(yyarg2); yynt = YYNTcexpr(); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate146() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate147(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate151(yyarg3: Cases) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yyrule103(yyarg3); yynt = YYNTcexpr(); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate150(yyarg3: Cases) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate151(yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate149() : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule144()); yygoto = 0
-      case CoolTokens.CASE() => yynt = YYNTcase_list(yyrule143()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTcase_list(yyarg3) => yygoto = yystate150(yyarg3);
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.WHILE() => true
-            case CoolTokens.VAR() => true
-            case CoolTokens.NULL() => true
-            case CoolTokens.STR_LIT(_) => true
-            case CoolTokens.NEW() => true
-            case CoolTokens.YYCHAR('-') => true
-            case CoolTokens.THIS() => true
-            case CoolTokens.YYCHAR('!') => true
-            case CoolTokens.YYCHAR('}') => true
-            case CoolTokens.OBJECTID(_) => true
-            case CoolTokens.YYCHAR('{') => true
-            case CoolTokens.YYCHAR('(') => true
-            case CoolTokens.SUPER() => true
-            case CoolTokens.INT_LIT(_) => true
-            case CoolTokens.IF() => true
-            case CoolTokens.ARROW() => true
-            case CoolTokens.BOOL_LIT(_) => true
-            case _ => false
-          }})
-          yygoto = yystate74();
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate148() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate149();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate152() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTstmt_list(yyrule120()); yygoto = 2
-      case _ => yynt = YYNTstmt_list(yyrule121()); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate128() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate129();
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate131();
-      case CoolTokens.LE() => yynext; yygoto = yystate133();
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate135();
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate138();
-      case CoolTokens.YYCHAR('{') => yyrule102(); yynt = YYNTcexpr(); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yyrule100(); yynt = YYNTcexpr(); yygoto = 0
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate140();
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate142();
-      case CoolTokens.ELSE() => yyrule101(); yynt = YYNTcexpr(); yygoto = 0
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate144();
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate146();
-      case CoolTokens.MATCH() => yynext; yygoto = yystate148();
-      case _ => yyrule97(); yynt = YYNTcexpr(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTcexpr() => yygoto = yystate152();
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate153(yyarg1: Expressions) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTstmt_list(yyarg1); yygoto = 2;
-      case CoolTokens.CASE() => yynt = YYNTstmt_list(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTstmt_list => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate155(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTstmt_list(yyrule113(yyarg1)); yygoto = 2
-      case CoolTokens.STR_LIT(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('{') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('(') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.INT_LIT(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.OBJECTID(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.VAR() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.NULL() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('-') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.WHILE() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.THIS() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('!') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.SUPER() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.NEW() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.IF() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
-      case CoolTokens.CASE() => yynt = YYNTstmt_list(yyrule113(yyarg1)); yygoto = 2
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate154(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg1);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg1);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg1);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg1);
-      case CoolTokens.YYCHAR('}') => yynt = YYNTstmt_list(yyrule114(yyarg1)); yygoto = 1
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg1);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg1);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg1);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg1);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg1);
-      case CoolTokens.CASE() => yynt = YYNTstmt_list(yyrule114(yyarg1)); yygoto = 1
-      case CoolTokens.YYCHAR(';') => yynext; yygoto = yystate155(yyarg1);
-      case _ => yynt = YYNTstmt_list(yyrule123(yyarg1)); yygoto = 1
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate120() : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg1) => yynext; yygoto = yystate121(yyarg1);
-      case CoolTokens.VAR() => yynext; yygoto = yystate122();
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.LE() => true
-            case CoolTokens.YYCHAR('=') => true
-            case CoolTokens.YYCHAR('/') => true
-            case CoolTokens.YYCHAR('*') => true
-            case CoolTokens.YYCHAR('.') => true
-            case CoolTokens.YYCHAR('<') => true
-            case CoolTokens.ELSE() => true
-            case CoolTokens.YYCHAR('-') => true
-            case CoolTokens.YYCHAR(';') => true
-            case CoolTokens.YYCHAR('}') => true
-            case CoolTokens.EQEQ() => true
-            case CoolTokens.YYCHAR('{') => true
-            case CoolTokens.MATCH() => true
-            case CoolTokens.YYCHAR('(') => true
-            case CoolTokens.CASE() => true
-            case CoolTokens.YYCHAR('+') => true
-            case _ => false
-          }})
-          yygoto = yystate128();
-        case YYNTstmt_list(yyarg1) => yygoto = yystate153(yyarg1);
-        case YYNTexpr(yyarg1) => yygoto = yystate154(yyarg1);
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate161(yyarg1: Symbol, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg3);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule73(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate160(yyarg1: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate161(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate159(yyarg1: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate160(yyarg1);
-      case CoolTokens.YYCHAR('(') => yynt = YYNTiexpr(yyrule96(yyarg1)); yygoto = 1
-      case CoolTokens.YYCHAR(':') => yynt = YYNTistmt_list(yyrule132(yyarg1)); yygoto = 1
-      case _ => yynt = YYNTiexpr(yyrule95(yyarg1)); yygoto = 1
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate165(yyarg2: Symbol, yyarg3: Symbol, yyarg4: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTistmt_list(yyrule127(yyarg2,yyarg3,yyarg4)); yygoto = 4
-      case _ => yynt = YYNTistmt_list(yyrule128(yyarg2,yyarg3,yyarg4)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate164(yyarg2: Symbol, yyarg3: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate125();
-      case _ => yynt = YYNTvar_init(yyrule138()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_init(yyarg4) => yygoto = yystate165(yyarg2,yyarg3,yyarg4);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate163(yyarg2: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(':') => yynt = YYNTvar_type(yyrule135()); yygoto = 0
-      case _ => yynt = YYNTvar_type(yyrule136()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_type(yyarg3) => yygoto = yystate164(yyarg2,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate162() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate163(yyarg2);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate170(yyarg3: Expression, yyarg5: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg5);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg5);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg5);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg5);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg5);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg5);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg5);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg5);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg5);
-      case _ => yynt = YYNTiexpr(yyrule78(yyarg3,yyarg5)); yygoto = 5
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate169(yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate31(yyarg5);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg5) => yygoto = yystate170(yyarg3,yyarg5);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate168(yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate169(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg3);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate167() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate168(yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate166() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate167();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate172(yyarg2: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg2);
-      case _ => yynt = YYNTiexpr(yyrule89(yyarg2)); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate171() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate31(yyarg2);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg2) => yygoto = yystate172(yyarg2);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate179(yyarg3: Expression, yyarg5: Expression, yyarg7: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg7);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg7);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg7);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg7);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg7);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg7);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg7);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg7);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg7);
-      case _ => yynt = YYNTiexpr(yyrule76(yyarg3,yyarg5,yyarg7)); yygoto = 7
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate178(yyarg3: Expression, yyarg5: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg7) => yynext; yygoto = yystate31(yyarg7);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg7) => yygoto = yystate179(yyarg3,yyarg5,yyarg7);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate177(yyarg3: Expression, yyarg5: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg5);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg5);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg5);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg5);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg5);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg5);
-      case CoolTokens.ELSE() => yynext; yygoto = yystate178(yyarg3,yyarg5);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg5);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg5);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg5);
-      case _ => yynt = YYNTiexpr(yyrule77(yyarg3,yyarg5)); yygoto = 5
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate176(yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate31(yyarg5);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg5) => yygoto = yystate177(yyarg3,yyarg5);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate175(yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate176(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg3);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate174() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate175(yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate173() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate174();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate183(yyarg3: Symbol, yyarg4: Expressions) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yynt = YYNTiexpr(yyrule74(yyarg3,yyarg4)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate182(yyarg3: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate42();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTactuals(yyarg4) => yygoto = yystate183(yyarg3,yyarg4);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate181() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate182(yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate180() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate181();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate185() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(';') => yynt = YYNTistmt_list(yyrule134()); yygoto = 2
-      case _ => yynt = YYNTistmt_list(yyrule133()); yygoto = 2
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate184() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate129();
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate131();
-      case CoolTokens.LE() => yynext; yygoto = yystate133();
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate135();
-      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate138();
-      case CoolTokens.YYCHAR('{') => yyrule102(); yynt = YYNTcexpr(); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yyrule100(); yynt = YYNTcexpr(); yygoto = 0
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate140();
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate142();
-      case CoolTokens.ELSE() => yyrule101(); yynt = YYNTcexpr(); yygoto = 0
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate144();
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate146();
-      case CoolTokens.MATCH() => yynext; yygoto = yystate148();
-      case _ => yyrule97(); yynt = YYNTcexpr(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTcexpr() => yygoto = yystate185();
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate186(yyarg1: Expressions) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTistmt_list(yyarg1); yygoto = 2;
-      case CoolTokens.CASE() => yynt = YYNTistmt_list(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTistmt_list => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate189(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule87(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate188(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate189(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate191(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule85(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate190(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate191(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate196(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule88(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate195(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate196(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate194(yyarg1: Expression, yyarg3: Symbol, yyarg4: Expressions) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yynt = YYNTiexpr(yyrule75(yyarg1,yyarg3,yyarg4)); yygoto = 4
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate193(yyarg1: Expression, yyarg3: Symbol) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate42();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTactuals(yyarg4) => yygoto = yystate194(yyarg1,yyarg3,yyarg4);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate192(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate193(yyarg1,yyarg3);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate198(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule84(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate197(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate198(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate200(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule83(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate199(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate200(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate202(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg3);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg3);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule86(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate201(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate202(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate208(yyarg1: Expression, yyarg4: Cases) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case _ => yynt = YYNTiexpr(yyrule80(yyarg1,yyarg4)); yygoto = 5
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate207(yyarg1: Expression, yyarg4: Cases) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate208(yyarg1,yyarg4);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate206(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule144()); yygoto = 0
-      case CoolTokens.CASE() => yynt = YYNTcase_list(yyrule143()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTcase_list(yyarg4) => yygoto = yystate207(yyarg1,yyarg4);
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.WHILE() => true
-            case CoolTokens.VAR() => true
-            case CoolTokens.NULL() => true
-            case CoolTokens.STR_LIT(_) => true
-            case CoolTokens.NEW() => true
-            case CoolTokens.YYCHAR('-') => true
-            case CoolTokens.THIS() => true
-            case CoolTokens.YYCHAR('!') => true
-            case CoolTokens.YYCHAR('}') => true
-            case CoolTokens.OBJECTID(_) => true
-            case CoolTokens.YYCHAR('{') => true
-            case CoolTokens.YYCHAR('(') => true
-            case CoolTokens.SUPER() => true
-            case CoolTokens.INT_LIT(_) => true
-            case CoolTokens.IF() => true
-            case CoolTokens.ARROW() => true
-            case CoolTokens.BOOL_LIT(_) => true
-            case _ => false
-          }})
-          yygoto = yystate74();
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate205(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate206(yyarg1);
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate204(yyarg1: Expression, yyarg3: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg3);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg3);
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg3);
-      case _ => yynt = YYNTiexpr(yyrule82(yyarg1,yyarg3)); yygoto = 3
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate203(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate31(yyarg3);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
-      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTexpr(yyarg3) => yygoto = yystate204(yyarg1,yyarg3);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate209(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTistmt_list(yyrule124(yyarg1)); yygoto = 2
-      case CoolTokens.STR_LIT(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('{') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('(') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.INT_LIT(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.OBJECTID(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.VAR() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.NULL() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('-') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.WHILE() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.THIS() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.YYCHAR('!') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.SUPER() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.NEW() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.IF() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
-      case CoolTokens.CASE() => yynt = YYNTistmt_list(yyrule124(yyarg1)); yygoto = 2
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate187(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate188(yyarg1);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate190(yyarg1);
-      case CoolTokens.LE() => yynext; yygoto = yystate195(yyarg1);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate192(yyarg1);
-      case CoolTokens.YYCHAR('}') => yynt = YYNTistmt_list(yyrule125(yyarg1)); yygoto = 1
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate197(yyarg1);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate199(yyarg1);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate201(yyarg1);
-      case CoolTokens.MATCH() => yynext; yygoto = yystate205(yyarg1);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate203(yyarg1);
-      case CoolTokens.CASE() => yynt = YYNTistmt_list(yyrule125(yyarg1)); yygoto = 1
-      case CoolTokens.YYCHAR(';') => yynext; yygoto = yystate209(yyarg1);
-      case _ => yynt = YYNTistmt_list(yyrule130(yyarg1)); yygoto = 1
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate158() : Int = {
-    var yygoto : Int = 0;
-    try {
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTiexpr(yyrule92()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTiexpr(yyrule79()); yygoto = 0
-      case CoolTokens.INT_LIT(_) => yynt = YYNTiexpr(yyrule91()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTiexpr(yyrule93()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg1) => yynext; yygoto = yystate159(yyarg1);
-      case CoolTokens.VAR() => yynext; yygoto = yystate162();
-      case CoolTokens.NULL() => yynt = YYNTiexpr(yyrule90()); yygoto = 0
-      case CoolTokens.WHILE() => yynext; yygoto = yystate166();
-      case CoolTokens.THIS() => yynt = YYNTiexpr(yyrule94()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate171();
-      case CoolTokens.IF() => yynext; yygoto = yystate173();
-      case CoolTokens.NEW() => yynt = YYNTiexpr(yyrule81()); yygoto = 0
-      case CoolTokens.SUPER() => yynext; yygoto = yystate180();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    } catch {
-      case YYError(s) => yynt = YYNTerror(s);
-    }
-    while (yygoto == 0) {
-      try {
-      yynt match {
-        case YYNTerror(s) => 
-          if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
-          yypanic({ t:CoolTokens.YYToken => t match {
-            case CoolTokens.LE() => true
-            case CoolTokens.YYCHAR('=') => true
-            case CoolTokens.YYCHAR('/') => true
-            case CoolTokens.YYCHAR('*') => true
-            case CoolTokens.YYCHAR('.') => true
-            case CoolTokens.YYCHAR('<') => true
-            case CoolTokens.ELSE() => true
-            case CoolTokens.YYCHAR('-') => true
-            case CoolTokens.YYCHAR(';') => true
-            case CoolTokens.YYCHAR('}') => true
-            case CoolTokens.EQEQ() => true
-            case CoolTokens.YYCHAR('{') => true
-            case CoolTokens.MATCH() => true
-            case CoolTokens.YYCHAR('(') => true
-            case CoolTokens.CASE() => true
-            case CoolTokens.YYCHAR('+') => true
-            case _ => false
-          }})
-          yygoto = yystate184();
-        case YYNTistmt_list(yyarg1) => yygoto = yystate186(yyarg1);
-        case YYNTiexpr(yyarg1) => yygoto = yystate187(yyarg1);
-      }
-      } catch {
-        case YYError(s) => yynt = YYNTerror(s);
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate105(yyarg1: Formal) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formal(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR(',') => yynt = YYNTvar_formal(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTvar_formal => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate104() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.VAR() => yynt = YYNTvar_formal(yyrule14()); yygoto = 0
-      case _ => yynt = YYNTvar_formal(yyrule14()); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar_formal(yyarg1) => yygoto = yystate105(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate111(yyarg1: Expressions) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.EQEQ() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.CLASS() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('/') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.OVERRIDE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.LE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('.') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('}') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.STR_LIT(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('{') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR(')') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.OBJECTID(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.INT_LIT(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('*') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.VAR() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('-') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.NULL() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.WHILE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.ELSE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.THIS() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('<') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('+') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('!') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.IF() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.SUPER() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.CASE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.NEW() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.MATCH() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.DEF() => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR(';') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR(',') => yynt = YYNTactuals(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTactuals => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate110() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate42();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTactuals(yyarg1) => yygoto = yystate111(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate117(yyarg1: Expression) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTblock(yyarg1); yygoto = 2;
-      case CoolTokens.CASE() => yynt = YYNTblock(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTblock => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate116() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTblock(yyrule111()); yygoto = 0
-      case CoolTokens.STR_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.INT_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.OBJECTID(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.VAR() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.NULL() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.WHILE() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.THIS() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.CASE() => yynt = YYNTblock(yyrule111()); yygoto = 0
-      case CoolTokens.SUPER() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.NEW() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case CoolTokens.IF() => yynt = YYNTblock(yyrule112()); yygoto = 0
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTblock(yyarg1) => yygoto = yystate117(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate109() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yynt = YYNTvar1(); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTvar1 => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate108() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yyrule16(); yynt = YYNTvar1(); yygoto = 0
-      case CoolTokens.VAR() => yyrule15(); yynt = YYNTvar1(); yygoto = 0
-      case _ => yyrule16(); yynt = YYNTvar1(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTvar1() => yygoto = yystate109();
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate115() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yynt = YYNTno_comma2a(); yygoto = 2;
-      case CoolTokens.VAR() => yynt = YYNTno_comma2a(); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTno_comma2a => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate114() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yyrule159(); yynt = YYNTno_comma2a(); yygoto = 0
-      case CoolTokens.VAR() => yyrule159(); yynt = YYNTno_comma2a(); yygoto = 0
-      case CoolTokens.YYCHAR(',') => yyrule160(); yynt = YYNTno_comma2a(); yygoto = 0
-      case _ => yyrule159(); yynt = YYNTno_comma2a(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTno_comma2a() => yygoto = yystate115();
         case _:YYNTerror => return 0;
       }
     }
@@ -6245,20 +3199,20 @@ class CoolParser extends CoolParserBase {
   private def yystate119(yyarg1: Expression) : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.EQEQ() => yynext; yygoto = yystate49(yyarg1);
-      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate51(yyarg1);
-      case CoolTokens.LE() => yynext; yygoto = yystate62(yyarg1);
-      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate53(yyarg1);
-      case CoolTokens.YYCHAR('}') => yynt = YYNTexpr(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR(')') => yynt = YYNTexpr(yyarg1); yygoto = 2;
-      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate56(yyarg1);
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate58(yyarg1);
-      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate66(yyarg1);
-      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate60(yyarg1);
-      case CoolTokens.CASE() => yynt = YYNTexpr(yyarg1); yygoto = 2;
-      case CoolTokens.MATCH() => yynext; yygoto = yystate70(yyarg1);
-      case CoolTokens.YYCHAR(';') => yynt = YYNTexpr(yyarg1); yygoto = 2;
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg1);
       case CoolTokens.YYCHAR(',') => yynt = YYNTexpr(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg1);
+      case CoolTokens.YYCHAR(')') => yynt = YYNTexpr(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg1);
+      case CoolTokens.CASE() => yynt = YYNTexpr(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg1);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg1);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg1);
+      case CoolTokens.YYCHAR(';') => yynt = YYNTexpr(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg1);
+      case CoolTokens.YYCHAR('}') => yynt = YYNTexpr(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg1);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg1);
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
@@ -6273,128 +3227,25 @@ class CoolParser extends CoolParserBase {
   private def yystate118() : Int = {
     var yygoto : Int = 0;
     yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
-      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
-      case CoolTokens.OBJECTID(yyarg1) => yynext; yygoto = yystate31(yyarg1);
-      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate33();
-      case CoolTokens.WHILE() => yynext; yygoto = yystate34();
-      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate36();
-      case CoolTokens.SUPER() => yynext; yygoto = yystate39();
-      case CoolTokens.IF() => yynext; yygoto = yystate37();
       case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg1) => yynext; yygoto = yystate40(yyarg1);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
       case _ => yynt = YYNTerror("syntax error");
     }
     while (yygoto == 0) {
       yynt match {
         case YYNTexpr(yyarg1) => yygoto = yystate119(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate215() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.OBJECTID(_) => yynt = YYNTsimple_case(yyrule149()); yygoto = 1
-      case CoolTokens.NULL() => yynt = YYNTsimple_case(yyrule150()); yygoto = 1
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate216(yyarg1: Case) : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.YYCHAR('}') => yynt = YYNTsimple_case(yyarg1); yygoto = 2;
-      case CoolTokens.CASE() => yynt = YYNTsimple_case(yyarg1); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTsimple_case => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate214() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.CASE() => yynext; yygoto = yystate215();
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTsimple_case(yyarg1) => yygoto = yystate216(yyarg1);
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate211() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.YYCHAR('{') => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.YYCHAR('(') => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.INT_LIT(_) => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.BOOL_LIT(_) => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.OBJECTID(_) => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.NULL() => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.YYCHAR('-') => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.WHILE() => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.THIS() => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.YYCHAR('!') => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.SUPER() => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.IF() => yynt = YYNTno_comma3a(); yygoto = 2;
-      case CoolTokens.NEW() => yynt = YYNTno_comma3a(); yygoto = 2;
-      case _ => yynt = YYNTerror("syntax error");
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case _:YYNTno_comma3a => return 0;
-        case _:YYNTerror => return 0;
-      }
-    }
-    yygoto-1
-  }
-
-  private def yystate210() : Int = {
-    var yygoto : Int = 0;
-    yycur match {
-      case CoolTokens.STR_LIT(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.YYCHAR('{') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.YYCHAR('(') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.BOOL_LIT(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.OBJECTID(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.INT_LIT(_) => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.NULL() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.YYCHAR('-') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.WHILE() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.THIS() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.YYCHAR('!') => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.IF() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.NEW() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.SUPER() => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-      case CoolTokens.YYCHAR(',') => yyrule162(); yynt = YYNTno_comma3a(); yygoto = 0
-      case _ => yyrule161(); yynt = YYNTno_comma3a(); yygoto = 0
-    }
-    while (yygoto == 0) {
-      yynt match {
-        case YYNTno_comma3a() => yygoto = yystate211();
         case _:YYNTerror => return 0;
       }
     }
@@ -6461,123 +3312,3278 @@ class CoolParser extends CoolParserBase {
     yygoto-1
   }
 
-/* The following three lines are for the .SKEL file ## */
-/************************************************************************/
-/*                DON'T CHANGE ANYTHING IN THIS SECTION                 */
-/************************************************************************/
+  private def yystate117(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynt = YYNTblock(yyarg1); yygoto = 2;
+      case CoolTokens.CASE() => yynt = YYNTblock(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTblock => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-// Features all added automatically to the parser class
+  private def yystate116() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.VAR() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.OBJECTID(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.CASE() => yynt = YYNTblock(yyrule111()); yygoto = 0
+      case CoolTokens.IF() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('-') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('!') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.SUPER() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.STR_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('}') => yynt = YYNTblock(yyrule111()); yygoto = 0
+      case CoolTokens.WHILE() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.THIS() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.INT_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTblock(yyarg1) => yygoto = yystate117(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-var scanner : CoolScanner = null;
-var filename : String = "<unknown>";
-var num_errors : Int = 0;
-var result : Classes = new Classes_nil();
-var superclass_name : Symbol = null;
-var current_inherit_status : Boolean = true;
-var io : IO = new IO();
-var options : CoolOptions = new CoolOptions();
+  private def yystate125(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yynt = YYNTvar_init(yyrule137(yyarg2)); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-def get_result() : Classes = result;
+  private def yystate124() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate125(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-def set_options(co : CoolOptions) : Unit = {
-  options = co;
-  yydebug = co.get_parse_debug()
-};
+  private def yystate162(yyarg2: Symbol, yyarg3: Symbol, yyarg4: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTistmt_list(yyrule127(yyarg2,yyarg3,yyarg4)); yygoto = 4
+      case _ => yynt = YYNTistmt_list(yyrule128(yyarg2,yyarg3,yyarg4)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-def reset(sc : CoolScanner, fn : String) : Unit = {
-  filename = fn;
-  scanner = sc;
-  num_errors = 0;
-  result = new Classes_nil();
-  superclass_name = null;
-  current_inherit_status = true;
+  private def yystate161(yyarg2: Symbol, yyarg3: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate124();
+      case _ => yynt = YYNTvar_init(yyrule138()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_init(yyarg4) => yygoto = yystate162(yyarg2,yyarg3,yyarg4);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-  yyreset(sc)
-};
+  private def yystate160(yyarg2: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(':') => yynt = YYNTvar_type(yyrule135()); yygoto = 0
+      case _ => yynt = YYNTvar_type(yyrule136()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_type(yyarg3) => yygoto = yystate161(yyarg2,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-def symbol(name : String) : Symbol = io.symbol(name);
+  private def yystate159() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate160(yyarg2);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-// Customizing the node factory
-override def get_line_number() : Int = scanner.getLineNumber();
+  private def yystate165(yyarg1: Symbol, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg3);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule73(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
 
-// we override the class_decl factory method to use the 
-// variable "current_inherit_status" AND 
-// to reset it afterwards for the next class.
-override def class_decl(name:Symbol,parent:Symbol,features:Features,filename:Symbol) : Cclass_decl = {
-  var result : Cclass_decl = super.class_decl(name,parent,features,filename);
-  t_Tree.s_inheritablep(result,current_inherit_status);
-  current_inherit_status = true;
-  result
-};
+  private def yystate164(yyarg1: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate165(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate163(yyarg1: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(':') => yynt = YYNTistmt_list(yyrule132(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('(') => yynt = YYNTiexpr(yyrule96(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate164(yyarg1);
+      case _ => yynt = YYNTiexpr(yyrule95(yyarg1)); yygoto = 1
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate172(yyarg3: Expression, yyarg5: Expression, yyarg7: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg7);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg7);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg7);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg7);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg7);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg7);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg7);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg7);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg7);
+      case _ => yynt = YYNTiexpr(yyrule76(yyarg3,yyarg5,yyarg7)); yygoto = 7
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate171(yyarg3: Expression, yyarg5: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg7) => yynext; yygoto = yystate40(yyarg7);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg7) => yygoto = yystate172(yyarg3,yyarg5,yyarg7);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate170(yyarg3: Expression, yyarg5: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg5);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg5);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg5);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg5);
+      case CoolTokens.ELSE() => yynext; yygoto = yystate171(yyarg3,yyarg5);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg5);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg5);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg5);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg5);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg5);
+      case _ => yynt = YYNTiexpr(yyrule77(yyarg3,yyarg5)); yygoto = 5
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate169(yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate40(yyarg5);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg5) => yygoto = yystate170(yyarg3,yyarg5);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate168(yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg3);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate169(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate167() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate168(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate166() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate167();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate174(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case _ => yynt = YYNTiexpr(yyrule89(yyarg2)); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate173() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate174(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate178(yyarg3: Symbol, yyarg4: Expressions) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yynt = YYNTiexpr(yyrule74(yyarg3,yyarg4)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate177(yyarg3: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate49();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTactuals(yyarg4) => yygoto = yystate178(yyarg3,yyarg4);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate176() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate177(yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate175() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate176();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate183(yyarg3: Expression, yyarg5: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg5);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg5);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg5);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg5);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg5);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg5);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg5);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg5);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg5);
+      case _ => yynt = YYNTiexpr(yyrule78(yyarg3,yyarg5)); yygoto = 5
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate182(yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg5) => yynext; yygoto = yystate40(yyarg5);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg5) => yygoto = yystate183(yyarg3,yyarg5);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate181(yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg3);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR(')') => yynext; yygoto = yystate182(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate180() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate181(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate179() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate180();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate130(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule109(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate129() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate130(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate132(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule108(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate131() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate132(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate135(yyarg2: Symbol, yyarg3: Expressions) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yyrule99(yyarg2,yyarg3); yynt = YYNTcexpr(); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate134(yyarg2: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate49();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTactuals(yyarg3) => yygoto = yystate135(yyarg2,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate133() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate134(yyarg2);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate137(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule98(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate136() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate137(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate139(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule105(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate138() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate139(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate141(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule106(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate140() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate141(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate143(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule110(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate142() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate143(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate145(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule104(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate144() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate145(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate147(yyarg2: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg2);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg2);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg2);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg2);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg2);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg2);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg2);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg2);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg2);
+      case _ => yyrule107(yyarg2); yynt = YYNTcexpr(); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate146() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate40(yyarg2);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg2) => yygoto = yystate147(yyarg2);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate151(yyarg3: Cases) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yyrule103(yyarg3); yynt = YYNTcexpr(); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate150(yyarg3: Cases) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate151(yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate149() : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule144()); yygoto = 0
+        case CoolTokens.CASE() => yynt = YYNTcase_list(yyrule143()); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYCHAR('-') => true
+              case CoolTokens.ARROW() => true
+              case CoolTokens.SUPER() => true
+              case CoolTokens.YYCHAR('(') => true
+              case CoolTokens.STR_LIT(_) => true
+              case CoolTokens.THIS() => true
+              case CoolTokens.YYCHAR('!') => true
+              case CoolTokens.NEW() => true
+              case CoolTokens.IF() => true
+              case CoolTokens.WHILE() => true
+              case CoolTokens.BOOL_LIT(_) => true
+              case CoolTokens.NULL() => true
+              case CoolTokens.OBJECTID(_) => true
+              case CoolTokens.VAR() => true
+              case CoolTokens.YYCHAR('{') => true
+              case CoolTokens.INT_LIT(_) => true
+              case CoolTokens.YYCHAR('}') => true
+              case _ => false
+            }})
+            yygoto = yystate80();
+          case YYNTcase_list(yyarg3) => yygoto = yystate150(yyarg3);
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate148() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate149();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate185() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTistmt_list(yyrule134()); yygoto = 2
+      case _ => yynt = YYNTistmt_list(yyrule133()); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate184() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate129();
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate131();
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate133();
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate136();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate138();
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate140();
+      case CoolTokens.LE() => yynext; yygoto = yystate142();
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate144();
+      case CoolTokens.ELSE() => yyrule101(); yynt = YYNTcexpr(); yygoto = 0
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate146();
+      case CoolTokens.MATCH() => yynext; yygoto = yystate148();
+      case CoolTokens.YYCHAR('(') => yyrule100(); yynt = YYNTcexpr(); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yyrule102(); yynt = YYNTcexpr(); yygoto = 0
+      case _ => yyrule97(); yynt = YYNTcexpr(); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTcexpr() => yygoto = yystate185();
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate188(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule87(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate187(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate188(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate190(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule86(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate189(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate190(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate193(yyarg1: Expression, yyarg3: Symbol, yyarg4: Expressions) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yynt = YYNTiexpr(yyrule75(yyarg1,yyarg3,yyarg4)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate192(yyarg1: Expression, yyarg3: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate49();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTactuals(yyarg4) => yygoto = yystate193(yyarg1,yyarg3,yyarg4);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate191(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate192(yyarg1,yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate195(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule83(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate194(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate195(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate197(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule84(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate196(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate197(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate199(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg3);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg3);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule88(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate198(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate199(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate200(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.VAR() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.NULL() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.OBJECTID(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.CASE() => yynt = YYNTistmt_list(yyrule124(yyarg1)); yygoto = 2
+      case CoolTokens.IF() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('-') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('!') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.SUPER() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.STR_LIT(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('}') => yynt = YYNTistmt_list(yyrule124(yyarg1)); yygoto = 2
+      case CoolTokens.WHILE() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.THIS() => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('(') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.INT_LIT(_) => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('{') => yynt = YYNTistmt_list(yyrule126(yyarg1)); yygoto = 2
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate202(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg3);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule82(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate201(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate202(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate204(yyarg1: Expression, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg3);
+      case _ => yynt = YYNTiexpr(yyrule85(yyarg1,yyarg3)); yygoto = 3
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate203(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate40(yyarg3);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg3) => yygoto = yystate204(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate208(yyarg1: Expression, yyarg4: Cases) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yynt = YYNTiexpr(yyrule80(yyarg1,yyarg4)); yygoto = 5
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate207(yyarg1: Expression, yyarg4: Cases) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate208(yyarg1,yyarg4);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate206(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.YYCHAR('}') => yynt = YYNTcase_list(yyrule144()); yygoto = 0
+        case CoolTokens.CASE() => yynt = YYNTcase_list(yyrule143()); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYCHAR('-') => true
+              case CoolTokens.ARROW() => true
+              case CoolTokens.SUPER() => true
+              case CoolTokens.YYCHAR('(') => true
+              case CoolTokens.STR_LIT(_) => true
+              case CoolTokens.THIS() => true
+              case CoolTokens.YYCHAR('!') => true
+              case CoolTokens.NEW() => true
+              case CoolTokens.IF() => true
+              case CoolTokens.WHILE() => true
+              case CoolTokens.BOOL_LIT(_) => true
+              case CoolTokens.NULL() => true
+              case CoolTokens.OBJECTID(_) => true
+              case CoolTokens.VAR() => true
+              case CoolTokens.YYCHAR('{') => true
+              case CoolTokens.INT_LIT(_) => true
+              case CoolTokens.YYCHAR('}') => true
+              case _ => false
+            }})
+            yygoto = yystate80();
+          case YYNTcase_list(yyarg4) => yygoto = yystate207(yyarg1,yyarg4);
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate205(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate206(yyarg1);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate186(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate187(yyarg1);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate189(yyarg1);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate191(yyarg1);
+      case CoolTokens.CASE() => yynt = YYNTistmt_list(yyrule125(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate194(yyarg1);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate196(yyarg1);
+      case CoolTokens.LE() => yynext; yygoto = yystate198(yyarg1);
+      case CoolTokens.YYCHAR(';') => yynext; yygoto = yystate200(yyarg1);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate201(yyarg1);
+      case CoolTokens.YYCHAR('}') => yynt = YYNTistmt_list(yyrule125(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate203(yyarg1);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate205(yyarg1);
+      case _ => yynt = YYNTistmt_list(yyrule130(yyarg1)); yygoto = 1
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate209(yyarg1: Expressions) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynt = YYNTistmt_list(yyarg1); yygoto = 2;
+      case CoolTokens.CASE() => yynt = YYNTistmt_list(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTistmt_list => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate158() : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.NEW() => yynt = YYNTiexpr(yyrule81()); yygoto = 0
+        case CoolTokens.BOOL_LIT(_) => yynt = YYNTiexpr(yyrule93()); yygoto = 0
+        case CoolTokens.VAR() => yynext; yygoto = yystate159();
+        case CoolTokens.NULL() => yynt = YYNTiexpr(yyrule90()); yygoto = 0
+        case CoolTokens.OBJECTID(yyarg1) => yynext; yygoto = yystate163(yyarg1);
+        case CoolTokens.IF() => yynext; yygoto = yystate166();
+        case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate173();
+        case CoolTokens.SUPER() => yynext; yygoto = yystate175();
+        case CoolTokens.STR_LIT(_) => yynt = YYNTiexpr(yyrule92()); yygoto = 0
+        case CoolTokens.WHILE() => yynext; yygoto = yystate179();
+        case CoolTokens.THIS() => yynt = YYNTiexpr(yyrule94()); yygoto = 0
+        case CoolTokens.INT_LIT(_) => yynt = YYNTiexpr(yyrule91()); yygoto = 0
+        case CoolTokens.YYCHAR('{') => yynt = YYNTiexpr(yyrule79()); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.CASE() => true
+              case CoolTokens.YYCHAR('-') => true
+              case CoolTokens.YYCHAR('*') => true
+              case CoolTokens.ELSE() => true
+              case CoolTokens.YYCHAR(';') => true
+              case CoolTokens.LE() => true
+              case CoolTokens.YYCHAR('=') => true
+              case CoolTokens.EQEQ() => true
+              case CoolTokens.YYCHAR('+') => true
+              case CoolTokens.YYCHAR('<') => true
+              case CoolTokens.YYCHAR('(') => true
+              case CoolTokens.YYCHAR('/') => true
+              case CoolTokens.YYCHAR('{') => true
+              case CoolTokens.MATCH() => true
+              case CoolTokens.YYCHAR('}') => true
+              case CoolTokens.YYCHAR('.') => true
+              case _ => false
+            }})
+            yygoto = yystate184();
+          case YYNTiexpr(yyarg1) => yygoto = yystate186(yyarg1);
+          case YYNTistmt_list(yyarg1) => yygoto = yystate209(yyarg1);
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate215() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NULL() => yynt = YYNTsimple_case(yyrule150()); yygoto = 1
+      case CoolTokens.OBJECTID(_) => yynt = YYNTsimple_case(yyrule149()); yygoto = 1
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate216(yyarg1: Case) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynt = YYNTsimple_case(yyarg1); yygoto = 2;
+      case CoolTokens.CASE() => yynt = YYNTsimple_case(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTsimple_case => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate214() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.CASE() => yynext; yygoto = yystate215();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTsimple_case(yyarg1) => yygoto = yystate216(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate105(yyarg1: Formal) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(',') => yynt = YYNTvar_formal(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formal(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTvar_formal => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate104() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.VAR() => yynt = YYNTvar_formal(yyrule14()); yygoto = 0
+      case _ => yynt = YYNTvar_formal(yyrule14()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_formal(yyarg1) => yygoto = yystate105(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate1() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYEOF() => yynt = YYNTprogram(); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTprogram => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate0() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.CLASS() => yyrule1(); yynt = YYNTprogram(); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTprogram() => yygoto = yystate1();
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate3() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yynt = YYNTclass_list(yyrule5()); yygoto = 1
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate5(yyarg1: Classes) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yynt = YYNTclass_list(yyrule6(yyarg1)); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate4(yyarg1: Classes) : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.CLASS() => yynt = YYNTclass_list(yyrule3(yyarg1)); yygoto = 1
+        case CoolTokens.YYCHAR(';') => yynt = YYNTclass_list(yyrule4(yyarg1)); yygoto = 1
+        case CoolTokens.YYEOF() => yynt = YYNTclass_list(yyarg1); yygoto = 2;
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYEOF() => true
+              case CoolTokens.CLASS() => true
+              case CoolTokens.YYCHAR(';') => true
+              case _ => false
+            }})
+            yygoto = yystate5(yyarg1);
+          case _:YYNTclass_list => return 0;
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate2() : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.CLASS() => yynt = YYNTclass_list(yyrule2()); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYEOF() => true
+              case CoolTokens.CLASS() => true
+              case CoolTokens.YYCHAR(';') => true
+              case _ => false
+            }})
+            yygoto = yystate3();
+          case YYNTclass_list(yyarg1) => yygoto = yystate4(yyarg1);
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate126(yyarg2: Symbol, yyarg3: Symbol, yyarg4: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTstmt_list(yyrule116(yyarg2,yyarg3,yyarg4)); yygoto = 4
+      case _ => yynt = YYNTstmt_list(yyrule117(yyarg2,yyarg3,yyarg4)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate123(yyarg2: Symbol, yyarg3: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate124();
+      case _ => yynt = YYNTvar_init(yyrule138()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_init(yyarg4) => yygoto = yystate126(yyarg2,yyarg3,yyarg4);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate122(yyarg2: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(':') => yynt = YYNTvar_type(yyrule135()); yygoto = 0
+      case _ => yynt = YYNTvar_type(yyrule136()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_type(yyarg3) => yygoto = yystate123(yyarg2,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate121() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate122(yyarg2);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate127(yyarg1: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(':') => yynt = YYNTstmt_list(yyrule119(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('(') => yynt = YYNTexpr(yyrule72(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate41(yyarg1);
+      case _ => yynt = YYNTexpr(yyrule71(yyarg1)); yygoto = 1
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate152() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTstmt_list(yyrule120()); yygoto = 2
+      case _ => yynt = YYNTstmt_list(yyrule121()); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate128() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate129();
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate131();
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate133();
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate136();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate138();
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate140();
+      case CoolTokens.LE() => yynext; yygoto = yystate142();
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate144();
+      case CoolTokens.ELSE() => yyrule101(); yynt = YYNTcexpr(); yygoto = 0
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate146();
+      case CoolTokens.MATCH() => yynext; yygoto = yystate148();
+      case CoolTokens.YYCHAR('(') => yyrule100(); yynt = YYNTcexpr(); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yyrule102(); yynt = YYNTcexpr(); yygoto = 0
+      case _ => yyrule97(); yynt = YYNTcexpr(); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTcexpr() => yygoto = yystate152();
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate153(yyarg1: Expressions) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynt = YYNTstmt_list(yyarg1); yygoto = 2;
+      case CoolTokens.CASE() => yynt = YYNTstmt_list(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTstmt_list => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate155(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.VAR() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.NULL() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.OBJECTID(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.CASE() => yynt = YYNTstmt_list(yyrule113(yyarg1)); yygoto = 2
+      case CoolTokens.IF() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('-') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('!') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.SUPER() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.STR_LIT(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('}') => yynt = YYNTstmt_list(yyrule113(yyarg1)); yygoto = 2
+      case CoolTokens.WHILE() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.THIS() => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('(') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.INT_LIT(_) => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR('{') => yynt = YYNTstmt_list(yyrule115(yyarg1)); yygoto = 2
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate154(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg1);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg1);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg1);
+      case CoolTokens.CASE() => yynt = YYNTstmt_list(yyrule114(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg1);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg1);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg1);
+      case CoolTokens.YYCHAR(';') => yynext; yygoto = yystate155(yyarg1);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg1);
+      case CoolTokens.YYCHAR('}') => yynt = YYNTstmt_list(yyrule114(yyarg1)); yygoto = 1
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg1);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg1);
+      case _ => yynt = YYNTstmt_list(yyrule123(yyarg1)); yygoto = 1
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate120() : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+        case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+        case CoolTokens.VAR() => yynext; yygoto = yystate121();
+        case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+        case CoolTokens.OBJECTID(yyarg1) => yynext; yygoto = yystate127(yyarg1);
+        case CoolTokens.IF() => yynext; yygoto = yystate42();
+        case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+        case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+        case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+        case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+        case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+        case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+        case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+        case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+        case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.CASE() => true
+              case CoolTokens.YYCHAR('-') => true
+              case CoolTokens.YYCHAR('*') => true
+              case CoolTokens.ELSE() => true
+              case CoolTokens.YYCHAR(';') => true
+              case CoolTokens.LE() => true
+              case CoolTokens.YYCHAR('=') => true
+              case CoolTokens.EQEQ() => true
+              case CoolTokens.YYCHAR('+') => true
+              case CoolTokens.YYCHAR('<') => true
+              case CoolTokens.YYCHAR('(') => true
+              case CoolTokens.YYCHAR('/') => true
+              case CoolTokens.YYCHAR('{') => true
+              case CoolTokens.MATCH() => true
+              case CoolTokens.YYCHAR('}') => true
+              case CoolTokens.YYCHAR('.') => true
+              case _ => false
+            }})
+            yygoto = yystate128();
+          case YYNTstmt_list(yyarg1) => yygoto = yystate153(yyarg1);
+          case YYNTexpr(yyarg1) => yygoto = yystate154(yyarg1);
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate157(yyarg1: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTvar_init(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTvar_init => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate156() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTvar_init(yyrule138()); yygoto = 0
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate124();
+      case _ => yynt = YYNTvar_init(yyrule138()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_init(yyarg1) => yygoto = yystate157(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate213(yyarg1: Cases) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynt = YYNTsimple_cases(yyarg1); yygoto = 2;
+      case CoolTokens.CASE() => yynt = YYNTsimple_cases(yyrule148(yyarg1)); yygoto = 1
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTsimple_cases => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate212() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.CASE() => yynt = YYNTsimple_cases(yyrule147()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTsimple_cases(yyarg1) => yygoto = yystate213(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate111(yyarg1: Expressions) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR(',') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.VAR() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.NULL() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('.') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.OBJECTID(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.CASE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.DEF() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('-') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('*') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.LE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.CLASS() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.SUPER() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.STR_LIT(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.WHILE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('/') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.THIS() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.MATCH() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('{') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('<') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.NEW() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR(')') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.IF() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('!') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR(';') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.OVERRIDE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('+') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.ELSE() => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('}') => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case CoolTokens.INT_LIT(_) => yynt = YYNTactuals(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTactuals => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate110() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate49();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTactuals(yyarg1) => yygoto = yystate111(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate107() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.VAR() => yynt = YYNTno_comma1a(); yygoto = 2;
+      case CoolTokens.OBJECTID(_) => yynt = YYNTno_comma1a(); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTno_comma1a => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate106() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(',') => yyrule158(); yynt = YYNTno_comma1a(); yygoto = 0
+      case CoolTokens.VAR() => yyrule157(); yynt = YYNTno_comma1a(); yygoto = 0
+      case CoolTokens.OBJECTID(_) => yyrule157(); yynt = YYNTno_comma1a(); yygoto = 0
+      case _ => yyrule157(); yynt = YYNTno_comma1a(); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTno_comma1a() => yygoto = yystate107();
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate10() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formals(yyrule10()); yygoto = 2
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate13(yyarg1: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(',') => yynt = YYNTvar_formal_list(yyrule13(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR(')') => yyrule152(); yynt = YYNTno_comma1(); yygoto = 1
+      case _ => yynt = YYNTvar_formal_list(yyrule13(yyarg1)); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate14(yyarg3: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formals(yyrule9(yyarg3)); yygoto = 4
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate12(yyarg3: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(',') => yynext; yygoto = yystate13(yyarg3);
+      case _ => yyrule151(); yynt = YYNTno_comma1(); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTno_comma1() => yygoto = yystate14(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate11() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.VAR() => yynt = YYNTvar_formal_list(yyrule12()); yygoto = 0
+      case CoolTokens.YYCHAR(')') => yynt = YYNTvar_formals(yyrule8()); yygoto = 2
+      case _ => yynt = YYNTvar_formal_list(yyrule12()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_formal_list(yyarg3) => yygoto = yystate12(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate9() : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.YYCHAR(',') => yyrule164(); yynt = YYNTno_comma1b(); yygoto = 0
+        case CoolTokens.VAR() => yyrule163(); yynt = YYNTno_comma1b(); yygoto = 0
+        case CoolTokens.YYCHAR(')') => yyrule163(); yynt = YYNTno_comma1b(); yygoto = 0
+        case CoolTokens.OBJECTID(_) => yyrule163(); yynt = YYNTno_comma1b(); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYCHAR(')') => true
+              case _ => false
+            }})
+            yygoto = yystate10();
+          case YYNTno_comma1b() => yygoto = yystate11();
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate15(yyarg1: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EXTENDS() => yynt = YYNTvar_formals(yyarg1); yygoto = 2;
+      case CoolTokens.YYCHAR('{') => yynt = YYNTvar_formals(yyarg1); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTvar_formals => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate8() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate9();
+      case CoolTokens.EXTENDS() => yynt = YYNTvar_formals(yyrule11()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTvar_formals(yyrule11()); yygoto = 0
+      case _ => yynt = YYNTvar_formals(yyrule11()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar_formals(yyarg1) => yygoto = yystate15(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate109() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(_) => yynt = YYNTvar1(); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTvar1 => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate108() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.VAR() => yyrule15(); yynt = YYNTvar1(); yygoto = 0
+      case CoolTokens.OBJECTID(_) => yyrule16(); yynt = YYNTvar1(); yygoto = 0
+      case _ => yyrule16(); yynt = YYNTvar1(); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTvar1() => yygoto = yystate109();
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate24(yyarg1: Features, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTfeature_list(yyrule27(yyarg1,yyarg3)); yygoto = 4
+      case _ => yynt = YYNTfeature_list(yyrule28(yyarg1,yyarg3)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate23(yyarg1: Features, yyarg3: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynext; yygoto = yystate24(yyarg1,yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate22(yyarg1: Features) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.VAR() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.OBJECTID(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.IF() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('-') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('!') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.SUPER() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.STR_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('}') => yynt = YYNTblock(yyrule111()); yygoto = 0
+      case CoolTokens.WHILE() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.THIS() => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.INT_LIT(_) => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTblock(yyrule112()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTblock(yyarg3) => yygoto = yystate23(yyarg1,yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate25(yyarg1: Features) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTfeature_list(yyrule25(yyarg1)); yygoto = 2
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate26(yyarg1: Features, yyarg2: Feature) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(';') => yynt = YYNTfeature_list(yyrule24(yyarg1,yyarg2)); yygoto = 2
+      case _ => yynt = YYNTfeature_list(yyrule26(yyarg1,yyarg2)); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate31() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(')') => yynt = YYNTformals(yyrule41()); yygoto = 2
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate34(yyarg1: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(',') => yynt = YYNTformal_list(yyrule43(yyarg1)); yygoto = 2
+      case CoolTokens.YYCHAR(')') => yyrule154(); yynt = YYNTno_comma2(); yygoto = 1
+      case _ => yynt = YYNTformal_list(yyrule43(yyarg1)); yygoto = 2
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate35(yyarg3: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(')') => yynt = YYNTformals(yyrule40(yyarg3)); yygoto = 4
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate33(yyarg3: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(',') => yynext; yygoto = yystate34(yyarg3);
+      case _ => yyrule153(); yynt = YYNTno_comma2(); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTno_comma2() => yygoto = yystate35(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate32() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.VAR() => yynt = YYNTformal_list(yyrule42()); yygoto = 0
+      case CoolTokens.YYCHAR(')') => yynt = YYNTformals(yyrule39()); yygoto = 2
+      case CoolTokens.OBJECTID(_) => yynt = YYNTformal_list(yyrule42()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTformal_list(yyarg3) => yygoto = yystate33(yyarg3);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate30() : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.YYCHAR(',') => yyrule166(); yynt = YYNTno_comma2b(); yygoto = 0
+        case CoolTokens.VAR() => yyrule165(); yynt = YYNTno_comma2b(); yygoto = 0
+        case CoolTokens.YYCHAR(')') => yyrule165(); yynt = YYNTno_comma2b(); yygoto = 0
+        case CoolTokens.OBJECTID(_) => yyrule165(); yynt = YYNTno_comma2b(); yygoto = 0
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYCHAR(')') => true
+              case _ => false
+            }})
+            yygoto = yystate31();
+          case YYNTno_comma2b() => yygoto = yystate32();
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate91(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yynt = YYNTfeature(yyrule30(yyarg1,yyarg3,yyarg4,yyarg6)); yygoto = 8
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate92(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol, yyarg8: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg8);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg8);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg8);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg8);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg8);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg8);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg8);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg8);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg8);
+      case _ => yynt = YYNTfeature(yyrule29(yyarg1,yyarg3,yyarg4,yyarg6,yyarg8)); yygoto = 8
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate39(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg8) => yynext; yygoto = yystate40(yyarg8);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.NATIVE() => yynext; yygoto = yystate91(yyarg1,yyarg3,yyarg4,yyarg6);
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg8) => yygoto = yystate92(yyarg1,yyarg3,yyarg4,yyarg6,yyarg8);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate38(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate39(yyarg1,yyarg3,yyarg4,yyarg6);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate37(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.TYPEID(yyarg6) => yynext; yygoto = yystate38(yyarg1,yyarg3,yyarg4,yyarg6);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate94(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals, yyarg6: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg6);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg6);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg6);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg6);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg6);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg6);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg6);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg6);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg6);
+      case _ => yynt = YYNTfeature(yyrule33(yyarg1,yyarg3,yyarg4,yyarg6)); yygoto = 6
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate93(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg6) => yynext; yygoto = yystate40(yyarg6);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg6) => yygoto = yystate94(yyarg1,yyarg3,yyarg4,yyarg6);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate36(yyarg1: Boolean, yyarg3: Symbol, yyarg4: Formals) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(':') => yynext; yygoto = yystate37(yyarg1,yyarg3,yyarg4);
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate93(yyarg1,yyarg3,yyarg4);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate29(yyarg1: Boolean, yyarg3: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate30();
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTformals(yyarg4) => yygoto = yystate36(yyarg1,yyarg3,yyarg4);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate28(yyarg1: Boolean) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(yyarg3) => yynext; yygoto = yystate29(yyarg1,yyarg3);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate27(yyarg1: Boolean) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.DEF() => yynext; yygoto = yystate28(yyarg1);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate100(yyarg2: Symbol, yyarg4: Symbol, yyarg6: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg6);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg6);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg6);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg6);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg6);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg6);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg6);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg6);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg6);
+      case _ => yynt = YYNTfeature(yyrule31(yyarg2,yyarg4,yyarg6)); yygoto = 6
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate99(yyarg2: Symbol, yyarg4: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg6) => yynext; yygoto = yystate40(yyarg6);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg6) => yygoto = yystate100(yyarg2,yyarg4,yyarg6);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate98(yyarg2: Symbol, yyarg4: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate99(yyarg2,yyarg4);
+      case _ => yynt = YYNTfeature(yyrule35(yyarg2,yyarg4)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate97(yyarg2: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.TYPEID(yyarg4) => yynext; yygoto = yystate98(yyarg2,yyarg4);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate102(yyarg2: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case _ => yynt = YYNTfeature(yyrule32(yyarg2)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate103(yyarg2: Symbol, yyarg4: Expression) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.EQEQ() => yynext; yygoto = yystate59(yyarg4);
+      case CoolTokens.LE() => yynext; yygoto = yystate72(yyarg4);
+      case CoolTokens.YYCHAR('<') => yynext; yygoto = yystate74(yyarg4);
+      case CoolTokens.YYCHAR('+') => yynext; yygoto = yystate61(yyarg4);
+      case CoolTokens.YYCHAR('/') => yynext; yygoto = yystate63(yyarg4);
+      case CoolTokens.YYCHAR('.') => yynext; yygoto = yystate65(yyarg4);
+      case CoolTokens.MATCH() => yynext; yygoto = yystate78(yyarg4);
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate70(yyarg4);
+      case CoolTokens.YYCHAR('*') => yynext; yygoto = yystate68(yyarg4);
+      case _ => yynt = YYNTfeature(yyrule34(yyarg2,yyarg4)); yygoto = 4
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate101(yyarg2: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.NEW() => yynt = YYNTexpr(yyrule54()); yygoto = 0
+      case CoolTokens.BOOL_LIT(_) => yynt = YYNTexpr(yyrule69()); yygoto = 0
+      case CoolTokens.NULL() => yynt = YYNTexpr(yyrule66()); yygoto = 0
+      case CoolTokens.OBJECTID(yyarg4) => yynext; yygoto = yystate40(yyarg4);
+      case CoolTokens.IF() => yynext; yygoto = yystate42();
+      case CoolTokens.YYCHAR('-') => yynext; yygoto = yystate44();
+      case CoolTokens.YYCHAR('!') => yynext; yygoto = yystate45();
+      case CoolTokens.SUPER() => yynext; yygoto = yystate46();
+      case CoolTokens.STR_LIT(_) => yynt = YYNTexpr(yyrule68()); yygoto = 0
+      case CoolTokens.WHILE() => yynext; yygoto = yystate55();
+      case CoolTokens.THIS() => yynt = YYNTexpr(yyrule70()); yygoto = 0
+      case CoolTokens.YYCHAR('(') => yynext; yygoto = yystate57();
+      case CoolTokens.NATIVE() => yynext; yygoto = yystate102(yyarg2);
+      case CoolTokens.INT_LIT(_) => yynt = YYNTexpr(yyrule67()); yygoto = 0
+      case CoolTokens.YYCHAR('{') => yynt = YYNTexpr(yyrule52()); yygoto = 0
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTexpr(yyarg4) => yygoto = yystate103(yyarg2,yyarg4);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate96(yyarg2: Symbol) : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(':') => yynext; yygoto = yystate97(yyarg2);
+      case CoolTokens.YYCHAR('=') => yynext; yygoto = yystate101(yyarg2);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate95() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.OBJECTID(yyarg2) => yynext; yygoto = yystate96(yyarg2);
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate21(yyarg1: Features) : Int = {
+    var yygoto : Int = 0;
+    try {
+      yycur match {
+        case CoolTokens.CLASS() => yynt = YYNTfeature(yyrule36()); yygoto = 0
+        case CoolTokens.VAR() => yyrule17(); yynt = YYNTvar2(); yygoto = 0
+        case CoolTokens.OVERRIDE() => yynt = YYNTopt_override(yyrule37()); yygoto = 0
+        case CoolTokens.YYCHAR('}') => yynt = YYNTfeature_list(yyarg1); yygoto = 2;
+        case CoolTokens.OBJECTID(_) => yyrule18(); yynt = YYNTvar2(); yygoto = 0
+        case CoolTokens.DEF() => yynt = YYNTopt_override(yyrule38()); yygoto = 0
+        case CoolTokens.YYCHAR('{') => yynext; yygoto = yystate22(yyarg1);
+        case _ => yynt = YYNTerror("syntax error");
+      }
+    } catch {
+      case YYError(s) => yynt = YYNTerror(s);
+    }
+    while (yygoto == 0) {
+      try {
+        yynt match {
+          case YYNTerror(s) =>
+            if (yycur == CoolTokens.YYEOF()) return 0;          yyerror(s)
+            yypanic({ t:CoolTokens.YYToken => t match {
+              case CoolTokens.YYCHAR(';') => true
+              case _ => false
+            }})
+            yygoto = yystate25(yyarg1);
+          case YYNTfeature(yyarg2) => yygoto = yystate26(yyarg1,yyarg2);
+          case YYNTopt_override(yyarg2) => yygoto = yystate27(yyarg2);
+          case YYNTvar2() => yygoto = yystate95();
+          case _:YYNTfeature_list => return 0;
+        }
+      } catch {
+        case YYError(s) => yynt = YYNTerror(s);
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate20() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR('}') => yynt = YYNTfeature_list(yyrule23()); yygoto = 0
+      case _ => yynt = YYNTfeature_list(yyrule23()); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTfeature_list(yyarg1) => yygoto = yystate21(yyarg1);
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate115() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.VAR() => yynt = YYNTno_comma2a(); yygoto = 2;
+      case CoolTokens.OBJECTID(_) => yynt = YYNTno_comma2a(); yygoto = 2;
+      case _ => yynt = YYNTerror("syntax error");
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case _:YYNTno_comma2a => return 0;
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  private def yystate114() : Int = {
+    var yygoto : Int = 0;
+    yycur match {
+      case CoolTokens.YYCHAR(',') => yyrule160(); yynt = YYNTno_comma2a(); yygoto = 0
+      case CoolTokens.VAR() => yyrule159(); yynt = YYNTno_comma2a(); yygoto = 0
+      case CoolTokens.OBJECTID(_) => yyrule159(); yynt = YYNTno_comma2a(); yygoto = 0
+      case _ => yyrule159(); yynt = YYNTno_comma2a(); yygoto = 0
+    }
+    while (yygoto == 0) {
+      yynt match {
+        case YYNTno_comma2a() => yygoto = yystate115();
+        case _:YYNTerror => return 0;
+      }
+    }
+    yygoto-1
+  }
+
+  /* The following three lines are for the .SKEL file ## */
+  /************************************************************************/
+  /*                DON'T CHANGE ANYTHING IN THIS SECTION                 */
+  /************************************************************************/
+
+  // Features all added automatically to the parser class
+
+  var scanner : CoolScanner = null;
+  var filename : String = "<unknown>";
+  var num_errors : Int = 0;
+  var result : Classes = new Classes_nil();
+  var superclass_name : Symbol = null;
+  var current_inherit_status : Boolean = true;
+  var io : IO = new IO();
+  var options : CoolOptions = new CoolOptions();
+
+  def get_result() : Classes = result;
+
+  def set_options(co : CoolOptions) : Unit = {
+    options = co;
+    yydebug = co.get_parse_debug()
+  };
+
+  def reset(sc : CoolScanner, fn : String) : Unit = {
+    filename = fn;
+    scanner = sc;
+    num_errors = 0;
+    result = new Classes_nil();
+    superclass_name = null;
+    current_inherit_status = true;
+
+    yyreset(sc)
+  };
+
+  def symbol(name : String) : Symbol = io.symbol(name);
+
+  // Customizing the node factory
+  override def get_line_number() : Int = scanner.getLineNumber();
+
+  // we override the class_decl factory method to use the
+  // variable "current_inherit_status" AND
+  // to reset it afterwards for the next class.
+  override def class_decl(name:Symbol,parent:Symbol,features:Features,filename:Symbol) : Cclass_decl = {
+    var result : Cclass_decl = super.class_decl(name,parent,features,filename);
+    // result.set_inheritablep(current_inherit_status);
+    current_inherit_status = true;
+    result
+  };
 
 
-// Code to help build constructors:
-var constr_is_native : Boolean = false;
-var constr_body : Expressions = new Expressions_nil();
-var attr_parameters : Features = new Features_nil();
+  // Code to help build constructors:
+  var constr_is_native : Boolean = false;
+  var constr_body : Expressions = new Expressions_nil();
+  var attr_parameters : Features = new Features_nil();
 
-def add_to_constructor(e : Expression) : Unit = { 
-  constr_body = constr_body.addcopy(e)
-};
+  def add_to_constructor(e : Expression) : Unit = {
+    constr_body = constr_body.addcopy(e)
+  };
 
-def attr_parameter(name : Symbol, typename : Symbol) : Formal = {
-  var mod_name : Symbol = symbol(name.toString());
-  attr_parameters = attr_parameters.addcopy(attr(name,typename));
-  add_to_constructor(assign(name,variable(mod_name)));
-  formal(mod_name,typename);
-};
+  def attr_parameter(name : Symbol, typename : Symbol) : Formal = {
+    var mod_name : Symbol = symbol("'".concat(io.symbol_name(name)));
+    attr_parameters = attr_parameters.addcopy(attr(name,typename));
+    add_to_constructor(assign(name,variable(mod_name)));
+    formal(mod_name,typename);
+  };
 
-def add_supercall(supername : Symbol, actuals : Expressions) : Unit = {
-  add_to_constructor(static_dispatch(variable(symbol("this")),
-				     supername,supername,actuals))
-};
+  def add_supercall(supername : Symbol, actuals : Expressions) : Unit = {
+    add_to_constructor(static_dispatch(variable(symbol("this")),
+      supername,supername,actuals))
+  };
 
-def native_constructor() : Unit = {
-  constr_is_native = true
-};
+  def native_constructor() : Unit = {
+    constr_is_native = true
+  };
 
-def make_constructor(name : Symbol, formals : Formals) : Features = {
-  // Create the constructor and return a list of features
-  // including all the parameter attributes and the constructor.
-  // If the constructor is native, then the body should be no_expr()
-  // otherwise it should be a block of the pieces collected so far
-  // ending with "this" (to return the newly initialized object).
-  //
-  // Before returning, the side-effected variables need to be reset:
-  // - constr_is_native
-  // - constr_body
-  // - attr_parameters
-  // This will give the next class a clean slate for its own constructor.
-  var body : Expressions = constr_body.addcopy(variable(symbol("this")));
-  var constr : Feature = 
-    method(false,name,formals,name,
-	   if (constr_is_native) no_expr() 
-	     else block(body));
-  var result : Features = attr_parameters.addcopy(constr);
-  constr_is_native = false;
-  constr_body = new Expressions_nil();
-  attr_parameters = new Features_nil();
-  result
-};
+  def make_constructor(name : Symbol, formals : Formals) : Features = {
+    // Create the constructor and return a list of features
+    // including all the parameter attributes and the constructor.
+    // If the constructor is native, then the body should be no_expr()
+    // otherwise it should be a block of the pieces collected so far
+    // ending with "this" (to return the newly initialized object).
+    //
+    // Before returning, the side-effected variables need to be reset:
+    // - constr_is_native
+    // - constr_body
+    // - attr_parameters
+    // This will give the next class a clean slate for its own constructor.
+    var constr : Feature =
+      method(false,name,formals,name,
+        if (constr_is_native) no_expr()
+        else block(constr_body.addcopy(variable(symbol("this")))));
+    var result : Features = attr_parameters.addcopy(constr);
+    constr_is_native = false;
+    constr_body = new Expressions_nil();
+    attr_parameters = new Features_nil();
+    result
+  };
 
-/* This function is called automatically when Bison detects a parse error. */
-def yyerror(message : String) : Unit = {
-  io.out(filename).out(":").out_any(scanner.getLineNumber()).out(": ");
-  io.out(message).out(", at or near ").out_any(yycur).out("\n");
+  /* This function is called automatically when Bison detects a parse error. */
+  def yyerror(message : String) : Unit = {
+    io.out(filename).out(":").out_any(scanner.getLineNumber()).out(": ");
+    io.out(message).out(", at or near ").out_any(yycur).out("\n");
 
-  num_errors = num_errors + 1;
-  var max : Int = options.get_max_errors();
-  if (max < num_errors) io.abort("More than ".concat(max.toString()).concat(" errors")) else ()
-};
+    num_errors = num_errors + 1;
+    var max : Int = options.get_max_errors();
+    if (max < num_errors) io.abort("More than ".concat(max.toString()).concat(" errors")) else ()
+  };
 
-def get_errors() : Int = num_errors;
-// #(
-// The following are for the instrumented parser (test3)
-def paren(e:Expression) = e;
-def eq(e1:Expression,e2:Expression) = super.dispatch(e1,symbol("equals"),new Expressions_one(e2));
-def implicit_dispatch(e : Expression, s : Symbol, a : Expressions) : Expression
+  def get_errors() : Int = num_errors;
+  // #(
+  // The following are for the instrumented parser (test3)
+  def paren(e:Expression) = e;
+  def eq(e1:Expression,e2:Expression) = super.dispatch(e1,symbol("equals"),new Expressions_one(e2));
+  def implicit_dispatch(e : Expression, s : Symbol, a : Expressions) : Expression
   = super.dispatch(e,s,a);
-def attr_init(s : Symbol, e : Expression) : Expression = super.assign(s,e);
-// #)
+  def attr_init(s : Symbol, e : Expression) : Expression = super.assign(s,e);
+  // #)
 
 }

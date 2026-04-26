@@ -1,0 +1,251 @@
+//#(
+class CheckDispatch2() {
+  var a : Int = null;
+  var b : Boolean = null;
+  var o : Any = new Unit();
+  var s : String = o;
+  var x : Nothing = x;
+  {
+    o = new Boolean(x);
+    o = new Int(x);
+    s = new String();
+    o = new Nothing();
+    o = new Null()
+  };
+}
+
+//#)
+
+//#(
+// check undefined classes:
+class UsesUndefined() {
+  var a : UndefinedAttrClass = 0;
+  def b(p : UndefinedParameterClass) : UndefinedResultClass =
+    { var v : UndefinedLetClass = new UndefinedNewClass();
+      v match {
+        case b : UndefinedBranchClass => ""
+      }
+    }
+  ;
+}
+
+class IllegalNothing() {
+  var x : Nothing = x;
+}
+
+
+// check type_leq and type_lub:
+class Root() { }
+class FirstChild(var x : Int) extends Root(x) {
+  { "" };
+  def useful() : String = 0;
+}
+class SecondChild() extends Root() {
+  { this };
+  def useful() : Int = "";
+}
+class FirstGrandChild() extends FirstChild() {
+  { true }; // implicitly inheriting without enough params
+}
+class LastGrandChild() extends SecondChild() {}
+
+class CheckTypes() {
+  var root : Root = null;
+  var firstChild : FirstChild = null;
+  var secondChild : SecondChild = null;
+  var firstGrandChild : FirstGrandChild = null;
+  var lastGrandChild : LastGrandChild = null;
+  def test_leq() : Any = {
+    // every assignment is illegal:
+      firstChild = root ;
+      firstChild = secondChild ;
+      firstChild = lastGrandChild ;
+      secondChild = root;
+      secondChild = firstChild;
+      secondChild = firstGrandChild;
+      firstGrandChild = root;
+      firstGrandChild = firstChild;
+      firstGrandChild = secondChild;
+      firstGrandChild = lastGrandChild;
+      lastGrandChild = root;
+      lastGrandChild = firstChild;
+      lastGrandChild = secondChild;
+      lastGrandChild = firstGrandChild
+  };
+  var a : Any = abort();
+  var i : Int = false;
+  var s : String = true;
+  var b : Boolean = 0;
+  var u : Unit = a;
+  def test_lub() : Any = {
+    // every assignment is illegal:
+      root = if (true) root else 0;
+      root = if (true) 0 else root;
+      i = if (true) root else 0;
+      i = if (true) 0 else root;
+      root = if (true) root else "hi";
+      root = if (true) "hi" else root;
+      s = if (true) root else "hi";
+      s = if (true) "hi" else root;
+      s = if (true) "hi" else null;
+      s = if (true) null else "hi";
+      i = if (true) 0 else null;
+      i = if (true) null else 0;
+      b = if (true) true else null;
+      b = if (true) null else true;
+      u = if (true) () else null;
+      u = if (true) null else ();
+      // no testing of integers and strings after this:
+      firstChild = if (true) firstChild else root;
+      firstChild = if (true) root else firstChild;
+      firstChild = if (true) null else root;
+      firstChild = if (true) root else null;
+      secondChild = if (true) secondChild else root;
+      secondChild = if (true) root else secondChild;
+      firstChild = if (true) firstChild else secondChild;
+      firstChild = if (true) secondChild else firstChild;
+      secondChild = if (true) firstChild else secondChild;
+      secondChild = if (true) secondChild else firstChild;
+      firstChild = if (true) firstGrandChild else root;
+      firstChild = if (true) root else firstGrandChild;
+      secondChild = if (true) lastGrandChild else root;
+      secondChild = if (true) root else lastGrandChild;
+      firstChild = if (true) firstGrandChild else secondChild;
+      firstChild = if (true) secondChild else firstGrandChild;
+      secondChild = if (true) firstGrandChild else secondChild;
+      secondChild = if (true) secondChild else firstGrandChild;
+      secondChild = if (true) lastGrandChild else firstChild;
+      secondChild = if (true) firstChild else lastGrandChild;
+      firstChild = if (true) lastGrandChild else firstChild;
+      firstChild = if (true) firstChild else lastGrandChild;
+      firstChild = if (true) lastGrandChild else firstGrandChild;
+      firstChild = if (true) firstGrandChild else lastGrandChild;
+      secondChild = if (true) lastGrandChild else firstGrandChild;
+      secondChild = if (true) firstGrandChild else lastGrandChild
+  };
+}
+
+/* Parser won't accept these!
+class BadThis(var this : BadThis) {
+  var this : BadThis = this;
+  def method(this : BadThis) : Any = {
+    var this : BadThis = null;
+    this match {
+      case this:BadThis => ()
+    }
+  }
+}
+*/
+
+class Shadowing() {
+  var a : FirstChild = null;
+  var o : Any = null;
+  // most assignmentd are illegal:
+  def method(aa : SecondChild) : Root = {
+    aa = null;
+    a = new FirstChild();
+    {
+      a = o;
+      a = new SecondChild(0);
+      a = new FirstChild(true);
+      a = new FirstChild("").useful();
+      a match {
+	case a:String =>
+	  a = "hello";
+	  a = new FirstChild(9,9);
+	  a = new SecondChild();
+	  a = 0;
+	  a = new IO();
+	  a = new SecondChild(9).useful()
+	case b:Int =>
+	  new IO().out_string(a)
+	case y : Nothing => x
+	case x:Null => x
+	case another:String => ""
+	case x : Any => another
+	case a:IO =>
+	  a = new FirstChild(3);
+	  a = new SecondChild();
+	  a = 0;
+	  a = "hello";
+	  a = undeclared
+      };
+      4 match {
+        case null => "impossible"
+      };
+      aa match {
+        case null => "possible"
+        case i:FirstChild => "impossible"
+        case null => "redundant"
+      };
+      a = "hello";
+      a = new IO()
+    };
+    a = 0;
+    a = this;
+    undeclared = this+1
+    //this = new Shadowing()
+  };
+  var sc : SecondChild = null;
+}
+
+class CheckDispatch() extends Complex() {
+  var a : Int = "hello";
+  var b : Boolean = null;
+  var o : Any = null;
+  {
+    dispatch(o,o); // wrong type
+    a = dispatch(2,new FirstChild(0), "too many");
+    b = dispatch(2); // too few
+    super.dispatch(o,o); // wrong type
+    a = super.dispatch(2, new SecondChild(), "too many");
+    b = super.dispatch(2) // too few
+  };
+  def local() : Int = 0;
+}
+
+class Complex() {
+  def dispatch(x : Int, y : Root) : String = y.copy();
+}
+
+class Expressions() {
+  def loop() : Nothing = this;
+  def test(i : Int, b : Boolean, s : String) : Any =
+    if (b < s)
+      { var j : Int = ! (-b+1);
+        var o : Any = j;
+        var k : Boolean = o;
+        var x : Nothing = loop();
+        if ((! s)*1)
+	  while ((("999" <= s) < (b + true)).copy()) {
+	    i = -(b == s) == (4 == "4"); // bool=string, int=bool, int=string
+	    s = (((! o) == o) + 4) == o; // bool=any, bool=int, int=any
+	    s = s + ".suffix"; s = s - ".suffix"; s = s * "a";
+	    b = b * true; b = b - false; b = b + b;
+	    j = j - (while ("true") { 0 });
+	    o = o + (while (o) if (o) 1-o else !o);
+	    j = 9 + x; j = j - x; j = j * x; j = x / j;
+	    b = x < 0; b = 12 <= x; b = !x;
+	    if (x) -x else x == x;
+	    b = "hello" / s
+	  }
+	else
+	  j = ({ i; null == (this+0) })
+      }
+    else
+      i = (s match { case i:String => i-23  case i:Any => i  })
+
+  ;
+  def test_equal(r : Root, s : String, i : Int, b : Boolean) : Boolean =
+  {
+      test_equal2(r == s, s == r);
+      test_equal2(r == i, i == r);
+      test_equal2(r == b, b == r);
+      test_equal2(s == i, i == s);
+      test_equal2(s == b, b == s);
+      test_equal2(i == b, b == i)
+  };
+  def test_equal2(x : Boolean, y : Boolean) : String = x+y;
+}
+
+//#)
